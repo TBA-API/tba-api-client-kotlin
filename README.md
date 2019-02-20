@@ -194,6 +194,8 @@ Class | Method | HTTP request | Description
  - [net.thefletcher.tbaapi.v3client.models.Match_Score_Breakdown_2017_Alliance](docs/Match_Score_Breakdown_2017_Alliance.md)
  - [net.thefletcher.tbaapi.v3client.models.Match_Score_Breakdown_2018](docs/Match_Score_Breakdown_2018.md)
  - [net.thefletcher.tbaapi.v3client.models.Match_Score_Breakdown_2018_Alliance](docs/Match_Score_Breakdown_2018_Alliance.md)
+ - [net.thefletcher.tbaapi.v3client.models.Match_Score_Breakdown_2019](docs/Match_Score_Breakdown_2019.md)
+ - [net.thefletcher.tbaapi.v3client.models.Match_Score_Breakdown_2019_Alliance](docs/Match_Score_Breakdown_2019_Alliance.md)
  - [net.thefletcher.tbaapi.v3client.models.Match_Simple](docs/Match_Simple.md)
  - [net.thefletcher.tbaapi.v3client.models.Match_Simple_alliances](docs/Match_Simple_alliances.md)
  - [net.thefletcher.tbaapi.v3client.models.Match_Timeseries_2018](docs/Match_Timeseries_2018.md)
