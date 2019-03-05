@@ -18,7 +18,7 @@ import net.thefletcher.tbaapi.v3client.models.Award_Recipient
  * @param name The name of the award as provided by FIRST. May vary for the same award type.
  * @param award_type Type of award given. See https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/award_type.py#L6
  * @param event_key The event_key of the event the award was won at.
- * @param recipient_list A list of recipients of the award at the event. Either team_key and/or awardee for individual awards.
+ * @param recipient_list A list of recipients of the award at the event. May have either a team_key or an awardee, both, or neither (in the case the award wasn't awarded at the event).
  * @param year The year this award was won.
  */
 data class Award (
@@ -28,7 +28,7 @@ data class Award (
     val award_type: kotlin.Int,
     /* The event_key of the event the award was won at. */
     val event_key: kotlin.String,
-    /* A list of recipients of the award at the event. Either team_key and/or awardee for individual awards. */
+    /* A list of recipients of the award at the event. May have either a team_key or an awardee, both, or neither (in the case the award wasn't awarded at the event). */
     val recipient_list: kotlin.Array<Award_Recipient>,
     /* The year this award was won. */
     val year: kotlin.Int
