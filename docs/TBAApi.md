@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getStatus"></a>
 # **getStatus**
-> API_Status getStatus(ifModifiedSince)
+> APIStatus getStatus(ifModifiedSince)
 
 
 
@@ -24,7 +24,7 @@ Returns API status, and TBA status information.
 val apiInstance = TBAApi()
 val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : API_Status = apiInstance.getStatus(ifModifiedSince)
+    val result : APIStatus = apiInstance.getStatus(ifModifiedSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling TBAApi#getStatus")
@@ -39,11 +39,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
-[**API_Status**](API_Status.md)
+[**APIStatus**](APIStatus.md)
 
 ### Authorization
 

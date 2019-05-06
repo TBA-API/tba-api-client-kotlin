@@ -60,8 +60,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -109,8 +109,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictEventsSimple"></a>
 # **getDistrictEventsSimple**
-> kotlin.Array&lt;Event_Simple&gt; getDistrictEventsSimple(districtKey, ifModifiedSince)
+> kotlin.Array&lt;EventSimple&gt; getDistrictEventsSimple(districtKey, ifModifiedSince)
 
 
 
@@ -143,7 +143,7 @@ val apiInstance = ListApi()
 val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
 val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Event_Simple> = apiInstance.getDistrictEventsSimple(districtKey, ifModifiedSince)
+    val result : kotlin.Array<EventSimple> = apiInstance.getDistrictEventsSimple(districtKey, ifModifiedSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ListApi#getDistrictEventsSimple")
@@ -158,12 +158,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
-[**kotlin.Array&lt;Event_Simple&gt;**](Event_Simple.md)
+[**kotlin.Array&lt;EventSimple&gt;**](EventSimple.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictRankings"></a>
 # **getDistrictRankings**
-> kotlin.Array&lt;District_Ranking&gt; getDistrictRankings(districtKey, ifModifiedSince)
+> kotlin.Array&lt;DistrictRanking&gt; getDistrictRankings(districtKey, ifModifiedSince)
 
 
 
@@ -192,7 +192,7 @@ val apiInstance = ListApi()
 val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
 val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<District_Ranking> = apiInstance.getDistrictRankings(districtKey, ifModifiedSince)
+    val result : kotlin.Array<DistrictRanking> = apiInstance.getDistrictRankings(districtKey, ifModifiedSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ListApi#getDistrictRankings")
@@ -207,12 +207,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
-[**kotlin.Array&lt;District_Ranking&gt;**](District_Ranking.md)
+[**kotlin.Array&lt;DistrictRanking&gt;**](DistrictRanking.md)
 
 ### Authorization
 
@@ -256,8 +256,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -305,8 +305,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictTeamsSimple"></a>
 # **getDistrictTeamsSimple**
-> kotlin.Array&lt;Team_Simple&gt; getDistrictTeamsSimple(districtKey, ifModifiedSince)
+> kotlin.Array&lt;TeamSimple&gt; getDistrictTeamsSimple(districtKey, ifModifiedSince)
 
 
 
@@ -339,7 +339,7 @@ val apiInstance = ListApi()
 val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
 val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Team_Simple> = apiInstance.getDistrictTeamsSimple(districtKey, ifModifiedSince)
+    val result : kotlin.Array<TeamSimple> = apiInstance.getDistrictTeamsSimple(districtKey, ifModifiedSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ListApi#getDistrictTeamsSimple")
@@ -354,12 +354,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
-[**kotlin.Array&lt;Team_Simple&gt;**](Team_Simple.md)
+[**kotlin.Array&lt;TeamSimple&gt;**](TeamSimple.md)
 
 ### Authorization
 
@@ -403,8 +403,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -452,8 +452,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -470,7 +470,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventTeamsSimple"></a>
 # **getEventTeamsSimple**
-> kotlin.Array&lt;Team_Simple&gt; getEventTeamsSimple(eventKey, ifModifiedSince)
+> kotlin.Array&lt;TeamSimple&gt; getEventTeamsSimple(eventKey, ifModifiedSince)
 
 
 
@@ -486,7 +486,7 @@ val apiInstance = ListApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
 val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Team_Simple> = apiInstance.getEventTeamsSimple(eventKey, ifModifiedSince)
+    val result : kotlin.Array<TeamSimple> = apiInstance.getEventTeamsSimple(eventKey, ifModifiedSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ListApi#getEventTeamsSimple")
@@ -501,12 +501,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
-[**kotlin.Array&lt;Team_Simple&gt;**](Team_Simple.md)
+[**kotlin.Array&lt;TeamSimple&gt;**](TeamSimple.md)
 
 ### Authorization
 
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventTeamsStatuses"></a>
 # **getEventTeamsStatuses**
-> kotlin.collections.Map&lt;kotlin.String, Team_Event_Status&gt; getEventTeamsStatuses(eventKey, ifModifiedSince)
+> kotlin.collections.Map&lt;kotlin.String, TeamEventStatus&gt; getEventTeamsStatuses(eventKey, ifModifiedSince)
 
 
 
@@ -535,7 +535,7 @@ val apiInstance = ListApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
 val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.collections.Map<kotlin.String, Team_Event_Status> = apiInstance.getEventTeamsStatuses(eventKey, ifModifiedSince)
+    val result : kotlin.collections.Map<kotlin.String, TeamEventStatus> = apiInstance.getEventTeamsStatuses(eventKey, ifModifiedSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ListApi#getEventTeamsStatuses")
@@ -550,12 +550,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
-[**kotlin.collections.Map&lt;kotlin.String, Team_Event_Status&gt;**](Team_Event_Status.md)
+[**kotlin.collections.Map&lt;kotlin.String, TeamEventStatus&gt;**](TeamEventStatus.md)
 
 ### Authorization
 
@@ -599,8 +599,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -648,8 +648,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -666,7 +666,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventsByYearSimple"></a>
 # **getEventsByYearSimple**
-> kotlin.Array&lt;Event_Simple&gt; getEventsByYearSimple(year, ifModifiedSince)
+> kotlin.Array&lt;EventSimple&gt; getEventsByYearSimple(year, ifModifiedSince)
 
 
 
@@ -682,7 +682,7 @@ val apiInstance = ListApi()
 val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
 val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Event_Simple> = apiInstance.getEventsByYearSimple(year, ifModifiedSince)
+    val result : kotlin.Array<EventSimple> = apiInstance.getEventsByYearSimple(year, ifModifiedSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ListApi#getEventsByYearSimple")
@@ -697,12 +697,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
-[**kotlin.Array&lt;Event_Simple&gt;**](Event_Simple.md)
+[**kotlin.Array&lt;EventSimple&gt;**](EventSimple.md)
 
 ### Authorization
 
@@ -715,7 +715,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventsStatusesByYear"></a>
 # **getTeamEventsStatusesByYear**
-> kotlin.collections.Map&lt;kotlin.String, Team_Event_Status&gt; getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince)
+> kotlin.collections.Map&lt;kotlin.String, TeamEventStatus&gt; getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince)
 
 
 
@@ -732,7 +732,7 @@ val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, e
 val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
 val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.collections.Map<kotlin.String, Team_Event_Status> = apiInstance.getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince)
+    val result : kotlin.collections.Map<kotlin.String, TeamEventStatus> = apiInstance.getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ListApi#getTeamEventsStatusesByYear")
@@ -747,13 +747,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
-[**kotlin.collections.Map&lt;kotlin.String, Team_Event_Status&gt;**](Team_Event_Status.md)
+[**kotlin.collections.Map&lt;kotlin.String, TeamEventStatus&gt;**](TeamEventStatus.md)
 
 ### Authorization
 
@@ -797,8 +797,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -847,9 +847,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
- **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
+ **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -898,9 +898,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
- **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
+ **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -917,7 +917,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamsByYearSimple"></a>
 # **getTeamsByYearSimple**
-> kotlin.Array&lt;Team_Simple&gt; getTeamsByYearSimple(year, pageNum, ifModifiedSince)
+> kotlin.Array&lt;TeamSimple&gt; getTeamsByYearSimple(year, pageNum, ifModifiedSince)
 
 
 
@@ -934,7 +934,7 @@ val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be
 val pageNum : kotlin.Int = 56 // kotlin.Int | Page number of results to return, zero-indexed
 val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Team_Simple> = apiInstance.getTeamsByYearSimple(year, pageNum, ifModifiedSince)
+    val result : kotlin.Array<TeamSimple> = apiInstance.getTeamsByYearSimple(year, pageNum, ifModifiedSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ListApi#getTeamsByYearSimple")
@@ -949,13 +949,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
- **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
+ **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
-[**kotlin.Array&lt;Team_Simple&gt;**](Team_Simple.md)
+[**kotlin.Array&lt;TeamSimple&gt;**](TeamSimple.md)
 
 ### Authorization
 
@@ -999,8 +999,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
@@ -1017,7 +1017,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamsSimple"></a>
 # **getTeamsSimple**
-> kotlin.Array&lt;Team_Simple&gt; getTeamsSimple(pageNum, ifModifiedSince)
+> kotlin.Array&lt;TeamSimple&gt; getTeamsSimple(pageNum, ifModifiedSince)
 
 
 
@@ -1033,7 +1033,7 @@ val apiInstance = ListApi()
 val pageNum : kotlin.Int = 56 // kotlin.Int | Page number of results to return, zero-indexed
 val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Team_Simple> = apiInstance.getTeamsSimple(pageNum, ifModifiedSince)
+    val result : kotlin.Array<TeamSimple> = apiInstance.getTeamsSimple(pageNum, ifModifiedSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ListApi#getTeamsSimple")
@@ -1048,12 +1048,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed |
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+ **pageNum** | **kotlin.Int**| Page number of results to return, zero-indexed | [default to null]
+ **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
 
 ### Return type
 
-[**kotlin.Array&lt;Team_Simple&gt;**](Team_Simple.md)
+[**kotlin.Array&lt;TeamSimple&gt;**](TeamSimple.md)
 
 ### Authorization
 
