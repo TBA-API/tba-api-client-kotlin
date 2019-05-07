@@ -13,6 +13,7 @@ package net.thefletcher.tbaapi.v3client.models
 
 import net.thefletcher.tbaapi.v3client.models.WLTRecord
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param playoffAverage 
@@ -22,10 +23,15 @@ import net.thefletcher.tbaapi.v3client.models.WLTRecord
  * @param status 
  */
 data class EliminationAllianceStatus (
+    @Json(name = "playoff_average")
     val playoffAverage: kotlin.Double? = null,
+    @Json(name = "level")
     val level: kotlin.String? = null,
+    @Json(name = "record")
     val record: WLTRecord? = null,
+    @Json(name = "current_level_record")
     val currentLevelRecord: WLTRecord? = null,
+    @Json(name = "status")
     val status: kotlin.String? = null
 ) {
 

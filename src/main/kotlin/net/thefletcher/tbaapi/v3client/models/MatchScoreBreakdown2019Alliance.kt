@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param adjustPoints 
@@ -67,56 +68,107 @@ package net.thefletcher.tbaapi.v3client.models
  * @param totalPoints 
  */
 data class MatchScoreBreakdown2019Alliance (
+    @Json(name = "adjustPoints")
     val adjustPoints: kotlin.Int? = null,
+    @Json(name = "autoPoints")
     val autoPoints: kotlin.Int? = null,
+    @Json(name = "bay1")
     val bay1: kotlin.String? = null,
+    @Json(name = "bay2")
     val bay2: kotlin.String? = null,
+    @Json(name = "bay3")
     val bay3: kotlin.String? = null,
+    @Json(name = "bay4")
     val bay4: kotlin.String? = null,
+    @Json(name = "bay5")
     val bay5: kotlin.String? = null,
+    @Json(name = "bay6")
     val bay6: kotlin.String? = null,
+    @Json(name = "bay7")
     val bay7: kotlin.String? = null,
+    @Json(name = "bay8")
     val bay8: kotlin.String? = null,
+    @Json(name = "cargoPoints")
     val cargoPoints: kotlin.Int? = null,
+    @Json(name = "completeRocketRankingPoint")
     val completeRocketRankingPoint: kotlin.Boolean? = null,
+    @Json(name = "completedRocketFar")
     val completedRocketFar: kotlin.Boolean? = null,
+    @Json(name = "completedRocketNear")
     val completedRocketNear: kotlin.Boolean? = null,
+    @Json(name = "endgameRobot1")
     val endgameRobot1: kotlin.String? = null,
+    @Json(name = "endgameRobot2")
     val endgameRobot2: kotlin.String? = null,
+    @Json(name = "endgameRobot3")
     val endgameRobot3: kotlin.String? = null,
+    @Json(name = "foulCount")
     val foulCount: kotlin.Int? = null,
+    @Json(name = "foulPoints")
     val foulPoints: kotlin.Int? = null,
+    @Json(name = "habClimbPoints")
     val habClimbPoints: kotlin.Int? = null,
+    @Json(name = "habDockingRankingPoint")
     val habDockingRankingPoint: kotlin.Boolean? = null,
+    @Json(name = "habLineRobot1")
     val habLineRobot1: kotlin.String? = null,
+    @Json(name = "habLineRobot2")
     val habLineRobot2: kotlin.String? = null,
+    @Json(name = "habLineRobot3")
     val habLineRobot3: kotlin.String? = null,
+    @Json(name = "hatchPanelPoints")
     val hatchPanelPoints: kotlin.Int? = null,
+    @Json(name = "lowLeftRocketFar")
     val lowLeftRocketFar: kotlin.String? = null,
+    @Json(name = "lowLeftRocketNear")
     val lowLeftRocketNear: kotlin.String? = null,
+    @Json(name = "lowRightRocketFar")
     val lowRightRocketFar: kotlin.String? = null,
+    @Json(name = "lowRightRocketNear")
     val lowRightRocketNear: kotlin.String? = null,
+    @Json(name = "midLeftRocketFar")
     val midLeftRocketFar: kotlin.String? = null,
+    @Json(name = "midLeftRocketNear")
     val midLeftRocketNear: kotlin.String? = null,
+    @Json(name = "midRightRocketFar")
     val midRightRocketFar: kotlin.String? = null,
+    @Json(name = "midRightRocketNear")
     val midRightRocketNear: kotlin.String? = null,
+    @Json(name = "preMatchBay1")
     val preMatchBay1: kotlin.String? = null,
+    @Json(name = "preMatchBay2")
     val preMatchBay2: kotlin.String? = null,
+    @Json(name = "preMatchBay3")
     val preMatchBay3: kotlin.String? = null,
+    @Json(name = "preMatchBay6")
     val preMatchBay6: kotlin.String? = null,
+    @Json(name = "preMatchBay7")
     val preMatchBay7: kotlin.String? = null,
+    @Json(name = "preMatchBay8")
     val preMatchBay8: kotlin.String? = null,
+    @Json(name = "preMatchLevelRobot1")
     val preMatchLevelRobot1: kotlin.String? = null,
+    @Json(name = "preMatchLevelRobot2")
     val preMatchLevelRobot2: kotlin.String? = null,
+    @Json(name = "preMatchLevelRobot3")
     val preMatchLevelRobot3: kotlin.String? = null,
+    @Json(name = "rp")
     val rp: kotlin.Int? = null,
+    @Json(name = "sandStormBonusPoints")
     val sandStormBonusPoints: kotlin.Int? = null,
+    @Json(name = "techFoulCount")
     val techFoulCount: kotlin.Int? = null,
+    @Json(name = "teleopPoints")
     val teleopPoints: kotlin.Int? = null,
+    @Json(name = "topLeftRocketFar")
     val topLeftRocketFar: kotlin.String? = null,
+    @Json(name = "topLeftRocketNear")
     val topLeftRocketNear: kotlin.String? = null,
+    @Json(name = "topRightRocketFar")
     val topRightRocketFar: kotlin.String? = null,
+    @Json(name = "topRightRocketNear")
     val topRightRocketNear: kotlin.String? = null,
+    @Json(name = "totalPoints")
     val totalPoints: kotlin.Int? = null
 ) {
 

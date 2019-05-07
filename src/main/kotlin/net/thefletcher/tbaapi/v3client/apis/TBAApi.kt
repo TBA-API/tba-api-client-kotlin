@@ -20,14 +20,14 @@ class TBAApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3")
     /**
     * 
     * Returns API status, and TBA status information.
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return APIStatus
     */
     @Suppress("UNCHECKED_CAST")
-    fun getStatus(ifModifiedSince: kotlin.String) : APIStatus {
+    fun getStatus(ifMinusModifiedMinusSince: kotlin.String?) : APIStatus {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/status",
@@ -45,7 +45,6 @@ class TBAApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3")
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 

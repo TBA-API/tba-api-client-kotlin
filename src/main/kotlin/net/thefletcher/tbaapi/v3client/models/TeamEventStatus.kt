@@ -15,6 +15,7 @@ import net.thefletcher.tbaapi.v3client.models.TeamEventStatusAlliance
 import net.thefletcher.tbaapi.v3client.models.TeamEventStatusPlayoff
 import net.thefletcher.tbaapi.v3client.models.TeamEventStatusRank
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param qual 
@@ -27,18 +28,26 @@ import net.thefletcher.tbaapi.v3client.models.TeamEventStatusRank
  * @param lastMatchKey TBA match key for the last match the team played in at this event, or null.
  */
 data class TeamEventStatus (
+    @Json(name = "qual")
     val qual: TeamEventStatusRank? = null,
+    @Json(name = "alliance")
     val alliance: TeamEventStatusAlliance? = null,
+    @Json(name = "playoff")
     val playoff: TeamEventStatusPlayoff? = null,
     /* An HTML formatted string suitable for display to the user containing the team's alliance pick status. */
+    @Json(name = "alliance_status_str")
     val allianceStatusStr: kotlin.String? = null,
     /* An HTML formatter string suitable for display to the user containing the team's playoff status. */
+    @Json(name = "playoff_status_str")
     val playoffStatusStr: kotlin.String? = null,
     /* An HTML formatted string suitable for display to the user containing the team's overall status summary of the event. */
+    @Json(name = "overall_status_str")
     val overallStatusStr: kotlin.String? = null,
     /* TBA match key for the next match the team is scheduled to play in at this event, or null. */
+    @Json(name = "next_match_key")
     val nextMatchKey: kotlin.String? = null,
     /* TBA match key for the last match the team played in at this event, or null. */
+    @Json(name = "last_match_key")
     val lastMatchKey: kotlin.String? = null
 ) {
 

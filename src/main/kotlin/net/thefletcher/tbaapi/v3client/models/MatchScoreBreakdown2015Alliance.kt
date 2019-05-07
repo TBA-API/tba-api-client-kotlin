@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param autoPoints 
@@ -40,29 +41,53 @@ package net.thefletcher.tbaapi.v3client.models
  * @param robotSet 
  */
 data class MatchScoreBreakdown2015Alliance (
+    @Json(name = "auto_points")
     val autoPoints: kotlin.Int? = null,
+    @Json(name = "teleop_points")
     val teleopPoints: kotlin.Int? = null,
+    @Json(name = "container_points")
     val containerPoints: kotlin.Int? = null,
+    @Json(name = "tote_points")
     val totePoints: kotlin.Int? = null,
+    @Json(name = "litter_points")
     val litterPoints: kotlin.Int? = null,
+    @Json(name = "foul_points")
     val foulPoints: kotlin.Int? = null,
+    @Json(name = "adjust_points")
     val adjustPoints: kotlin.Int? = null,
+    @Json(name = "total_points")
     val totalPoints: kotlin.Int? = null,
+    @Json(name = "foul_count")
     val foulCount: kotlin.Int? = null,
+    @Json(name = "tote_count_far")
     val toteCountFar: kotlin.Int? = null,
+    @Json(name = "tote_count_near")
     val toteCountNear: kotlin.Int? = null,
+    @Json(name = "tote_set")
     val toteSet: kotlin.Boolean? = null,
+    @Json(name = "tote_stack")
     val toteStack: kotlin.Boolean? = null,
+    @Json(name = "container_count_level1")
     val containerCountLevel1: kotlin.Int? = null,
+    @Json(name = "container_count_level2")
     val containerCountLevel2: kotlin.Int? = null,
+    @Json(name = "container_count_level3")
     val containerCountLevel3: kotlin.Int? = null,
+    @Json(name = "container_count_level4")
     val containerCountLevel4: kotlin.Int? = null,
+    @Json(name = "container_count_level5")
     val containerCountLevel5: kotlin.Int? = null,
+    @Json(name = "container_count_level6")
     val containerCountLevel6: kotlin.Int? = null,
+    @Json(name = "container_set")
     val containerSet: kotlin.Boolean? = null,
+    @Json(name = "litter_count_container")
     val litterCountContainer: kotlin.Int? = null,
+    @Json(name = "litter_count_landfill")
     val litterCountLandfill: kotlin.Int? = null,
+    @Json(name = "litter_count_unprocessed")
     val litterCountUnprocessed: kotlin.Int? = null,
+    @Json(name = "robot_set")
     val robotSet: kotlin.Boolean? = null
 ) {
 

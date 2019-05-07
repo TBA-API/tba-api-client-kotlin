@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param precision Integer expressing the number of digits of precision in the number provided in `sort_orders`.
@@ -19,8 +20,10 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class EventRankingExtraStatsInfo (
     /* Integer expressing the number of digits of precision in the number provided in `sort_orders`. */
+    @Json(name = "precision")
     val precision: java.math.BigDecimal,
     /* Name of the field used in the `extra_stats` array. */
+    @Json(name = "name")
     val name: kotlin.String
 ) {
 

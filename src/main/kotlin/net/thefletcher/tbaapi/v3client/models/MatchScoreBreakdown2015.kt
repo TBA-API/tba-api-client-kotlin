@@ -22,9 +22,13 @@ import com.squareup.moshi.Json
  * @param coopertitionPoints 
  */
 data class MatchScoreBreakdown2015 (
+    @Json(name = "blue")
     val blue: MatchScoreBreakdown2015Alliance? = null,
+    @Json(name = "red")
     val red: MatchScoreBreakdown2015Alliance? = null,
+    @Json(name = "coopertition")
     val coopertition: MatchScoreBreakdown2015.Coopertition? = null,
+    @Json(name = "coopertition_points")
     val coopertitionPoints: kotlin.Int? = null
 ) {
 
@@ -34,11 +38,14 @@ data class MatchScoreBreakdown2015 (
     */
     enum class Coopertition(val value: kotlin.String){
     
-        @Json(name = "None") none("None"),
+        @Json(name = "None")
+        none("None"),
     
-        @Json(name = "Unknown") unknown("Unknown"),
+        @Json(name = "Unknown")
+        unknown("Unknown"),
     
-        @Json(name = "Stack") stack("Stack");
+        @Json(name = "Stack")
+        stack("Stack");
     
     }
 

@@ -13,6 +13,7 @@ package net.thefletcher.tbaapi.v3client.models
 
 import net.thefletcher.tbaapi.v3client.models.TeamEventStatusAllianceBackup
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param name Alliance name, may be null.
@@ -22,11 +23,15 @@ import net.thefletcher.tbaapi.v3client.models.TeamEventStatusAllianceBackup
  */
 data class TeamEventStatusAlliance (
     /* Alliance number. */
+    @Json(name = "number")
     val number: kotlin.Int,
     /* Order the team was picked in the alliance from 0-2, with 0 being alliance captain. */
+    @Json(name = "pick")
     val pick: kotlin.Int,
     /* Alliance name, may be null. */
+    @Json(name = "name")
     val name: kotlin.String? = null,
+    @Json(name = "backup")
     val backup: TeamEventStatusAllianceBackup? = null
 ) {
 

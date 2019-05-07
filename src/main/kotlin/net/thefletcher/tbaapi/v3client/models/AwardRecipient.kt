@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * An `Award_Recipient` object represents the team and/or person who received an award at an event.
  * @param teamKey The TBA team key for the team that was given the award. May be null.
@@ -19,8 +20,10 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class AwardRecipient (
     /* The TBA team key for the team that was given the award. May be null. */
+    @Json(name = "team_key")
     val teamKey: kotlin.String? = null,
     /* The name of the individual given the award. May be null. */
+    @Json(name = "awardee")
     val awardee: kotlin.String? = null
 ) {
 

@@ -13,13 +13,16 @@ package net.thefletcher.tbaapi.v3client.models
 
 import net.thefletcher.tbaapi.v3client.models.MatchScoreBreakdown2017Alliance
 
+import com.squareup.moshi.Json
 /**
  * See the 2017 FMS API documentation for a description of each value.
  * @param blue 
  * @param red 
  */
 data class MatchScoreBreakdown2017 (
+    @Json(name = "blue")
     val blue: MatchScoreBreakdown2017Alliance? = null,
+    @Json(name = "red")
     val red: MatchScoreBreakdown2017Alliance? = null
 ) {
 

@@ -14,6 +14,7 @@ package net.thefletcher.tbaapi.v3client.models
 import net.thefletcher.tbaapi.v3client.models.TeamEventStatusRankRanking
 import net.thefletcher.tbaapi.v3client.models.TeamEventStatusRankSortOrderInfo
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param numTeams Number of teams ranked.
@@ -23,10 +24,14 @@ import net.thefletcher.tbaapi.v3client.models.TeamEventStatusRankSortOrderInfo
  */
 data class TeamEventStatusRank (
     /* Number of teams ranked. */
+    @Json(name = "num_teams")
     val numTeams: kotlin.Int? = null,
+    @Json(name = "ranking")
     val ranking: TeamEventStatusRankRanking? = null,
     /* Ordered list of names corresponding to the elements of the `sort_orders` array. */
+    @Json(name = "sort_order_info")
     val sortOrderInfo: kotlin.Array<TeamEventStatusRankSortOrderInfo>? = null,
+    @Json(name = "status")
     val status: kotlin.String? = null
 ) {
 

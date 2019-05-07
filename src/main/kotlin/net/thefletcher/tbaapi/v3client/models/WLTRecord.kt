@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * A Win-Loss-Tie record for a team, or an alliance.
  * @param losses Number of losses.
@@ -20,10 +21,13 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class WLTRecord (
     /* Number of losses. */
+    @Json(name = "losses")
     val losses: kotlin.Int,
     /* Number of wins. */
+    @Json(name = "wins")
     val wins: kotlin.Int,
     /* Number of ties. */
+    @Json(name = "ties")
     val ties: kotlin.Int
 ) {
 

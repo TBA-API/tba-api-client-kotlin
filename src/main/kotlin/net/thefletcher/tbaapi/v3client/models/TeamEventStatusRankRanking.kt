@@ -13,6 +13,7 @@ package net.thefletcher.tbaapi.v3client.models
 
 import net.thefletcher.tbaapi.v3client.models.WLTRecord
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param matchesPlayed Number of matches played.
@@ -25,17 +26,24 @@ import net.thefletcher.tbaapi.v3client.models.WLTRecord
  */
 data class TeamEventStatusRankRanking (
     /* Number of matches played. */
+    @Json(name = "matches_played")
     val matchesPlayed: kotlin.Int? = null,
     /* For some years, average qualification score. Can be null. */
+    @Json(name = "qual_average")
     val qualAverage: kotlin.Double? = null,
     /* Ordered list of values used to determine the rank. See the `sort_order_info` property for the name of each value. */
+    @Json(name = "sort_orders")
     val sortOrders: kotlin.Array<java.math.BigDecimal>? = null,
+    @Json(name = "record")
     val record: WLTRecord? = null,
     /* Relative rank of this team. */
+    @Json(name = "rank")
     val rank: kotlin.Int? = null,
     /* Number of matches the team was disqualified for. */
+    @Json(name = "dq")
     val dq: kotlin.Int? = null,
     /* TBA team key for this rank. */
+    @Json(name = "team_key")
     val teamKey: kotlin.String? = null
 ) {
 

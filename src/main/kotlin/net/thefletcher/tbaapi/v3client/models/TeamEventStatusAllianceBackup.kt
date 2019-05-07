@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * Backup status, may be null.
  * @param &#x60;out&#x60; TBA key for the team replaced by the backup.
@@ -19,8 +20,10 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class TeamEventStatusAllianceBackup (
     /* TBA key for the team replaced by the backup. */
+    @Json(name = "out")
     val `out`: kotlin.String? = null,
     /* TBA key for the backup team called in. */
+    @Json(name = "in")
     val `in`: kotlin.String? = null
 ) {
 

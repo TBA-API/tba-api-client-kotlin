@@ -13,13 +13,16 @@ package net.thefletcher.tbaapi.v3client.models
 
 import net.thefletcher.tbaapi.v3client.models.MatchAlliance
 
+import com.squareup.moshi.Json
 /**
  * A list of alliances, the teams on the alliances, and their score.
  * @param red 
  * @param blue 
  */
 data class MatchSimpleAlliances (
+    @Json(name = "red")
     val red: MatchAlliance? = null,
+    @Json(name = "blue")
     val blue: MatchAlliance? = null
 ) {
 

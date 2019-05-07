@@ -13,6 +13,7 @@ package net.thefletcher.tbaapi.v3client.models
 
 import net.thefletcher.tbaapi.v3client.models.DistrictList
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param key TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event.
@@ -29,25 +30,36 @@ import net.thefletcher.tbaapi.v3client.models.DistrictList
  */
 data class EventSimple (
     /* TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event. */
+    @Json(name = "key")
     val key: kotlin.String,
     /* Official name of event on record either provided by FIRST or organizers of offseason event. */
+    @Json(name = "name")
     val name: kotlin.String,
     /* Event short code, as provided by FIRST. */
+    @Json(name = "event_code")
     val eventCode: kotlin.String,
     /* Event Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/event_type.py#L2 */
+    @Json(name = "event_type")
     val eventType: kotlin.Int,
     /* Event start date in `yyyy-mm-dd` format. */
+    @Json(name = "start_date")
     val startDate: java.time.LocalDateTime,
     /* Event end date in `yyyy-mm-dd` format. */
+    @Json(name = "end_date")
     val endDate: java.time.LocalDateTime,
     /* Year the event data is for. */
+    @Json(name = "year")
     val year: kotlin.Int,
+    @Json(name = "district")
     val district: DistrictList? = null,
     /* City, town, village, etc. the event is located in. */
+    @Json(name = "city")
     val city: kotlin.String? = null,
     /* State or Province the event is located in. */
+    @Json(name = "state_prov")
     val stateProv: kotlin.String? = null,
     /* Country the event is located in. */
+    @Json(name = "country")
     val country: kotlin.String? = null
 ) {
 

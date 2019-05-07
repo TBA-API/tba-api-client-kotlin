@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param key TBA team key with the format `frcXXXX` with `XXXX` representing the team number.
@@ -35,40 +36,58 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class Team (
     /* TBA team key with the format `frcXXXX` with `XXXX` representing the team number. */
+    @Json(name = "key")
     val key: kotlin.String,
     /* Official team number issued by FIRST. */
+    @Json(name = "team_number")
     val teamNumber: kotlin.Int,
     /* Official long name registered with FIRST. */
+    @Json(name = "name")
     val name: kotlin.String,
     /* First year the team officially competed. */
+    @Json(name = "rookie_year")
     val rookieYear: kotlin.Int,
     /* Team nickname provided by FIRST. */
+    @Json(name = "nickname")
     val nickname: kotlin.String? = null,
     /* City of team derived from parsing the address registered with FIRST. */
+    @Json(name = "city")
     val city: kotlin.String? = null,
     /* State of team derived from parsing the address registered with FIRST. */
+    @Json(name = "state_prov")
     val stateProv: kotlin.String? = null,
     /* Country of team derived from parsing the address registered with FIRST. */
+    @Json(name = "country")
     val country: kotlin.String? = null,
     /* Will be NULL, for future development. */
+    @Json(name = "address")
     val address: kotlin.String? = null,
     /* Postal code from the team address. */
+    @Json(name = "postal_code")
     val postalCode: kotlin.String? = null,
     /* Will be NULL, for future development. */
+    @Json(name = "gmaps_place_id")
     val gmapsPlaceId: kotlin.String? = null,
     /* Will be NULL, for future development. */
+    @Json(name = "gmaps_url")
     val gmapsUrl: kotlin.String? = null,
     /* Will be NULL, for future development. */
+    @Json(name = "lat")
     val lat: kotlin.Double? = null,
     /* Will be NULL, for future development. */
+    @Json(name = "lng")
     val lng: kotlin.Double? = null,
     /* Will be NULL, for future development. */
+    @Json(name = "location_name")
     val locationName: kotlin.String? = null,
     /* Official website associated with the team. */
+    @Json(name = "website")
     val website: kotlin.String? = null,
     /* Team's motto as provided by FIRST. This field is deprecated and will return null - will be removed at end-of-season in 2019. */
+    @Json(name = "motto")
     val motto: kotlin.String? = null,
     /* Location of the team's home championship each year as a key-value pair. The year (as a string) is the key, and the city is the value. */
+    @Json(name = "home_championship")
     val homeChampionship: kotlin.Any? = null
 ) {
 

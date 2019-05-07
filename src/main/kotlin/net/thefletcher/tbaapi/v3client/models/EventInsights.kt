@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * A year-specific event insight object expressed as a JSON string, separated in to `qual` and `playoff` fields. See also Event_Insights_2016, Event_Insights_2017, etc.
  * @param qual Inights for the qualification round of an event
@@ -19,8 +20,10 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class EventInsights (
     /* Inights for the qualification round of an event */
+    @Json(name = "qual")
     val qual: kotlin.Any? = null,
     /* Insights for the playoff round of an event */
+    @Json(name = "playoff")
     val playoff: kotlin.Any? = null
 ) {
 

@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param type Can be one of 'youtube' or 'tba'
@@ -19,8 +20,10 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class MatchVideos (
     /* Can be one of 'youtube' or 'tba' */
+    @Json(name = "type")
     val type: kotlin.String? = null,
     /* Unique key representing this video */
+    @Json(name = "key")
     val key: kotlin.String? = null
 ) {
 

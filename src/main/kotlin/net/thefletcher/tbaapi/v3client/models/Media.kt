@@ -25,52 +25,72 @@ import com.squareup.moshi.Json
  */
 data class Media (
     /* TBA identifier for this media. */
+    @Json(name = "key")
     val key: kotlin.String,
     /* String type of the media element. */
+    @Json(name = "type")
     val type: Media.Type,
     /* The key used to identify this media on the media site. */
+    @Json(name = "foreign_key")
     val foreignKey: kotlin.String? = null,
     /* If required, a JSON dict of additional media information. */
+    @Json(name = "details")
     val details: kotlin.Any? = null,
     /* True if the media is of high quality. */
+    @Json(name = "preferred")
     val preferred: kotlin.Boolean? = null,
     /* Direct URL to the media. */
+    @Json(name = "direct_url")
     val directUrl: kotlin.String? = null,
     /* The URL that leads to the full web page for the media, if one exists. */
+    @Json(name = "view_url")
     val viewUrl: kotlin.String? = null
 ) {
 
     /**
     * String type of the media element.
-    * Values: youtube,cdphotothread,imgur,facebookMinusprofile,youtubeMinuschannel,twitterMinusprofile,githubMinusprofile,instagramMinusprofile,periscopeMinusprofile,grabcad,instagramMinusimage,externalMinuslink,avatar
+    * Values: youtube,cdphotothread,imgur,facebookMinusProfile,youtubeMinusChannel,twitterMinusProfile,githubMinusProfile,instagramMinusProfile,periscopeMinusProfile,grabcad,instagramMinusImage,externalMinusLink,avatar
     */
     enum class Type(val value: kotlin.String){
     
-        @Json(name = "youtube") youtube("youtube"),
+        @Json(name = "youtube")
+        youtube("youtube"),
     
-        @Json(name = "cdphotothread") cdphotothread("cdphotothread"),
+        @Json(name = "cdphotothread")
+        cdphotothread("cdphotothread"),
     
-        @Json(name = "imgur") imgur("imgur"),
+        @Json(name = "imgur")
+        imgur("imgur"),
     
-        @Json(name = "facebook-profile") facebookMinusprofile("facebook-profile"),
+        @Json(name = "facebook-profile")
+        facebookMinusProfile("facebook-profile"),
     
-        @Json(name = "youtube-channel") youtubeMinuschannel("youtube-channel"),
+        @Json(name = "youtube-channel")
+        youtubeMinusChannel("youtube-channel"),
     
-        @Json(name = "twitter-profile") twitterMinusprofile("twitter-profile"),
+        @Json(name = "twitter-profile")
+        twitterMinusProfile("twitter-profile"),
     
-        @Json(name = "github-profile") githubMinusprofile("github-profile"),
+        @Json(name = "github-profile")
+        githubMinusProfile("github-profile"),
     
-        @Json(name = "instagram-profile") instagramMinusprofile("instagram-profile"),
+        @Json(name = "instagram-profile")
+        instagramMinusProfile("instagram-profile"),
     
-        @Json(name = "periscope-profile") periscopeMinusprofile("periscope-profile"),
+        @Json(name = "periscope-profile")
+        periscopeMinusProfile("periscope-profile"),
     
-        @Json(name = "grabcad") grabcad("grabcad"),
+        @Json(name = "grabcad")
+        grabcad("grabcad"),
     
-        @Json(name = "instagram-image") instagramMinusimage("instagram-image"),
+        @Json(name = "instagram-image")
+        instagramMinusImage("instagram-image"),
     
-        @Json(name = "external-link") externalMinuslink("external-link"),
+        @Json(name = "external-link")
+        externalMinusLink("external-link"),
     
-        @Json(name = "avatar") avatar("avatar");
+        @Json(name = "avatar")
+        avatar("avatar");
     
     }
 

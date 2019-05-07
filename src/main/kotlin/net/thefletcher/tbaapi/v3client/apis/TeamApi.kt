@@ -32,14 +32,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of team district rankings for the given district.
     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<DistrictRanking>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getDistrictRankings(districtKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<DistrictRanking> {
+    fun getDistrictRankings(districtKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<DistrictRanking> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/district/{district_key}/rankings".replace("{"+"district_key"+"}", "$districtKey"),
@@ -57,7 +57,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -65,14 +64,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of &#x60;Team&#x60; objects that competed in events in the given district.
     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Team>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getDistrictTeams(districtKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<Team> {
+    fun getDistrictTeams(districtKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Team> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/district/{district_key}/teams".replace("{"+"district_key"+"}", "$districtKey"),
@@ -90,7 +89,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -98,14 +96,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of &#x60;Team&#x60; objects that competed in events in the given district.
     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getDistrictTeamsKeys(districtKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<kotlin.String> {
+    fun getDistrictTeamsKeys(districtKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/district/{district_key}/teams/keys".replace("{"+"district_key"+"}", "$districtKey"),
@@ -123,7 +121,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -131,14 +128,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a short-form list of &#x60;Team&#x60; objects that competed in events in the given district.
     * @param districtKey TBA District Key, eg &#x60;2016fim&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<TeamSimple>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getDistrictTeamsSimple(districtKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<TeamSimple> {
+    fun getDistrictTeamsSimple(districtKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<TeamSimple> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/district/{district_key}/teams/simple".replace("{"+"district_key"+"}", "$districtKey"),
@@ -156,7 +153,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -164,14 +160,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of &#x60;Team&#x60; objects that competed in the given event.
     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Team>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getEventTeams(eventKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<Team> {
+    fun getEventTeams(eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Team> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/event/{event_key}/teams".replace("{"+"event_key"+"}", "$eventKey"),
@@ -189,7 +185,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -197,14 +192,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of &#x60;Team&#x60; keys that competed in the given event.
     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getEventTeamsKeys(eventKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<kotlin.String> {
+    fun getEventTeamsKeys(eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/event/{event_key}/teams/keys".replace("{"+"event_key"+"}", "$eventKey"),
@@ -222,7 +217,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -230,14 +224,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a short-form list of &#x60;Team&#x60; objects that competed in the given event.
     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<TeamSimple>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getEventTeamsSimple(eventKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<TeamSimple> {
+    fun getEventTeamsSimple(eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<TeamSimple> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/event/{event_key}/teams/simple".replace("{"+"event_key"+"}", "$eventKey"),
@@ -255,7 +249,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -263,14 +256,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a key-value list of the event statuses for teams competing at the given event.
     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.collections.Map<kotlin.String, TeamEventStatus>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getEventTeamsStatuses(eventKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.collections.Map<kotlin.String, TeamEventStatus> {
+    fun getEventTeamsStatuses(eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.collections.Map<kotlin.String, TeamEventStatus> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/event/{event_key}/teams/statuses".replace("{"+"event_key"+"}", "$eventKey"),
@@ -288,7 +281,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -296,14 +288,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a &#x60;Team&#x60; object for the team referenced by the given key.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return Team
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeam(teamKey: kotlin.String, ifModifiedSince: kotlin.String) : Team {
+    fun getTeam(teamKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : Team {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}".replace("{"+"team_key"+"}", "$teamKey"),
@@ -321,7 +313,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -329,14 +320,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of awards the given team has won.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Award>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamAwards(teamKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<Award> {
+    fun getTeamAwards(teamKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Award> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/awards".replace("{"+"team_key"+"}", "$teamKey"),
@@ -354,7 +345,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -363,14 +353,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of awards the given team has won in a given year.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param year Competition Year (or Season). Must be 4 digits. 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Award>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamAwardsByYear(teamKey: kotlin.String, year: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<Award> {
+    fun getTeamAwardsByYear(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Award> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/awards/{year}".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
@@ -388,7 +378,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -396,14 +385,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<DistrictList>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamDistricts(teamKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<DistrictList> {
+    fun getTeamDistricts(teamKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<DistrictList> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/districts".replace("{"+"team_key"+"}", "$teamKey"),
@@ -421,7 +410,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -430,14 +418,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of awards the given team won at the given event.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Award>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventAwards(teamKey: kotlin.String, eventKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<Award> {
+    fun getTeamEventAwards(teamKey: kotlin.String, eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Award> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/event/{event_key}/awards".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"event_key"+"}", "$eventKey"),
@@ -455,7 +443,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -464,14 +451,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of matches for the given team and event.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Match>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventMatches(teamKey: kotlin.String, eventKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<Match> {
+    fun getTeamEventMatches(teamKey: kotlin.String, eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Match> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/event/{event_key}/matches".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"event_key"+"}", "$eventKey"),
@@ -489,7 +476,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -498,14 +484,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of match keys for matches for the given team and event.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventMatchesKeys(teamKey: kotlin.String, eventKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<kotlin.String> {
+    fun getTeamEventMatchesKeys(teamKey: kotlin.String, eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/event/{event_key}/matches/keys".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"event_key"+"}", "$eventKey"),
@@ -523,7 +509,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -532,14 +517,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a short-form list of matches for the given team and event.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Match>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventMatchesSimple(teamKey: kotlin.String, eventKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<Match> {
+    fun getTeamEventMatchesSimple(teamKey: kotlin.String, eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Match> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/event/{event_key}/matches/simple".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"event_key"+"}", "$eventKey"),
@@ -557,7 +542,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -566,14 +550,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets the competition rank and status of the team at the given event.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return TeamEventStatus
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventStatus(teamKey: kotlin.String, eventKey: kotlin.String, ifModifiedSince: kotlin.String) : TeamEventStatus {
+    fun getTeamEventStatus(teamKey: kotlin.String, eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : TeamEventStatus {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/event/{event_key}/status".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"event_key"+"}", "$eventKey"),
@@ -591,7 +575,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -599,14 +582,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of all events this team has competed at.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Event>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEvents(teamKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<Event> {
+    fun getTeamEvents(teamKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Event> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/events".replace("{"+"team_key"+"}", "$teamKey"),
@@ -624,7 +607,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -633,14 +615,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of events this team has competed at in the given year.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param year Competition Year (or Season). Must be 4 digits. 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Event>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventsByYear(teamKey: kotlin.String, year: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<Event> {
+    fun getTeamEventsByYear(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Event> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/events/{year}".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
@@ -658,7 +640,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -667,14 +648,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of the event keys for events this team has competed at in the given year.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param year Competition Year (or Season). Must be 4 digits. 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventsByYearKeys(teamKey: kotlin.String, year: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<kotlin.String> {
+    fun getTeamEventsByYearKeys(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/events/{year}/keys".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
@@ -692,7 +673,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -701,14 +681,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a short-form list of events this team has competed at in the given year.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param year Competition Year (or Season). Must be 4 digits. 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<EventSimple>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventsByYearSimple(teamKey: kotlin.String, year: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<EventSimple> {
+    fun getTeamEventsByYearSimple(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<EventSimple> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/events/{year}/simple".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
@@ -726,7 +706,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -734,14 +713,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of the event keys for all events this team has competed at.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventsKeys(teamKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<kotlin.String> {
+    fun getTeamEventsKeys(teamKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/events/keys".replace("{"+"team_key"+"}", "$teamKey"),
@@ -759,7 +738,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -767,14 +745,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a short-form list of all events this team has competed at.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<EventSimple>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventsSimple(teamKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<EventSimple> {
+    fun getTeamEventsSimple(teamKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<EventSimple> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/events/simple".replace("{"+"team_key"+"}", "$teamKey"),
@@ -792,7 +770,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -801,14 +778,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a key-value list of the event statuses for events this team has competed at in the given year.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param year Competition Year (or Season). Must be 4 digits. 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.collections.Map<kotlin.String, TeamEventStatus>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventsStatusesByYear(teamKey: kotlin.String, year: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.collections.Map<kotlin.String, TeamEventStatus> {
+    fun getTeamEventsStatusesByYear(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.collections.Map<kotlin.String, TeamEventStatus> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/events/{year}/statuses".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
@@ -826,7 +803,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -835,14 +811,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of matches for the given team and year.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param year Competition Year (or Season). Must be 4 digits. 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Match>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamMatchesByYear(teamKey: kotlin.String, year: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<Match> {
+    fun getTeamMatchesByYear(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Match> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/matches/{year}".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
@@ -860,7 +836,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -869,14 +844,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of match keys for matches for the given team and year.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param year Competition Year (or Season). Must be 4 digits. 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamMatchesByYearKeys(teamKey: kotlin.String, year: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<kotlin.String> {
+    fun getTeamMatchesByYearKeys(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/matches/{year}/keys".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
@@ -894,7 +869,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -903,14 +877,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a short-form list of matches for the given team and year.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param year Competition Year (or Season). Must be 4 digits. 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<MatchSimple>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamMatchesByYearSimple(teamKey: kotlin.String, year: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<MatchSimple> {
+    fun getTeamMatchesByYearSimple(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<MatchSimple> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/matches/{year}/simple".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
@@ -928,7 +902,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -937,14 +910,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of Media (videos / pictures) for the given team and tag.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param mediaTag Media Tag which describes the Media. 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Media>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamMediaByTag(teamKey: kotlin.String, mediaTag: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<Media> {
+    fun getTeamMediaByTag(teamKey: kotlin.String, mediaTag: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Media> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/media/tag/{media_tag}".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"media_tag"+"}", "$mediaTag"),
@@ -962,7 +935,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -972,14 +944,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param mediaTag Media Tag which describes the Media. 
     * @param year Competition Year (or Season). Must be 4 digits. 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Media>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamMediaByTagYear(teamKey: kotlin.String, mediaTag: kotlin.String, year: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<Media> {
+    fun getTeamMediaByTagYear(teamKey: kotlin.String, mediaTag: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Media> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/media/tag/{media_tag}/{year}".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"media_tag"+"}", "$mediaTag").replace("{"+"year"+"}", "$year"),
@@ -997,7 +969,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -1006,14 +977,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of Media (videos / pictures) for the given team and year.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
     * @param year Competition Year (or Season). Must be 4 digits. 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Media>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamMediaByYear(teamKey: kotlin.String, year: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<Media> {
+    fun getTeamMediaByYear(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Media> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/media/{year}".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
@@ -1031,7 +1002,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -1039,14 +1009,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of year and robot name pairs for each year that a robot name was provided. Will return an empty array if the team has never named a robot.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<TeamRobot>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamRobots(teamKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<TeamRobot> {
+    fun getTeamRobots(teamKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<TeamRobot> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/robots".replace("{"+"team_key"+"}", "$teamKey"),
@@ -1064,7 +1034,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -1072,14 +1041,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a &#x60;Team_Simple&#x60; object for the team referenced by the given key.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return TeamSimple
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamSimple(teamKey: kotlin.String, ifModifiedSince: kotlin.String) : TeamSimple {
+    fun getTeamSimple(teamKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : TeamSimple {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/simple".replace("{"+"team_key"+"}", "$teamKey"),
@@ -1097,7 +1066,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -1105,14 +1073,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of Media (social media) for the given team.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Media>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamSocialMedia(teamKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<Media> {
+    fun getTeamSocialMedia(teamKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Media> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/social_media".replace("{"+"team_key"+"}", "$teamKey"),
@@ -1130,7 +1098,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -1138,14 +1105,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of years in which the team participated in at least one competition.
     * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.Int>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamYearsParticipated(teamKey: kotlin.String, ifModifiedSince: kotlin.String) : kotlin.Array<kotlin.Int> {
+    fun getTeamYearsParticipated(teamKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.Int> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/team/{team_key}/years_participated".replace("{"+"team_key"+"}", "$teamKey"),
@@ -1163,7 +1130,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -1171,14 +1137,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of &#x60;Team&#x60; objects, paginated in groups of 500.
     * @param pageNum Page number of results to return, zero-indexed 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Team>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeams(pageNum: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<Team> {
+    fun getTeams(pageNum: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Team> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/teams/{page_num}".replace("{"+"page_num"+"}", "$pageNum"),
@@ -1196,7 +1162,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -1205,14 +1170,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of &#x60;Team&#x60; objects that competed in the given year, paginated in groups of 500.
     * @param year Competition Year (or Season). Must be 4 digits. 
     * @param pageNum Page number of results to return, zero-indexed 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Team>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamsByYear(year: kotlin.Int, pageNum: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<Team> {
+    fun getTeamsByYear(year: kotlin.Int, pageNum: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Team> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/teams/{year}/{page_num}".replace("{"+"year"+"}", "$year").replace("{"+"page_num"+"}", "$pageNum"),
@@ -1230,7 +1195,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -1239,14 +1203,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list Team Keys that competed in the given year, paginated in groups of 500.
     * @param year Competition Year (or Season). Must be 4 digits. 
     * @param pageNum Page number of results to return, zero-indexed 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamsByYearKeys(year: kotlin.Int, pageNum: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<kotlin.String> {
+    fun getTeamsByYearKeys(year: kotlin.Int, pageNum: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/teams/{year}/{page_num}/keys".replace("{"+"year"+"}", "$year").replace("{"+"page_num"+"}", "$pageNum"),
@@ -1264,7 +1228,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -1273,14 +1236,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * Gets a list of short form &#x60;Team_Simple&#x60; objects that competed in the given year, paginated in groups of 500.
     * @param year Competition Year (or Season). Must be 4 digits. 
     * @param pageNum Page number of results to return, zero-indexed 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<TeamSimple>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamsByYearSimple(year: kotlin.Int, pageNum: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<TeamSimple> {
+    fun getTeamsByYearSimple(year: kotlin.Int, pageNum: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<TeamSimple> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/teams/{year}/{page_num}/simple".replace("{"+"year"+"}", "$year").replace("{"+"page_num"+"}", "$pageNum"),
@@ -1298,7 +1261,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -1306,14 +1268,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of Team keys, paginated in groups of 500. (Note, each page will not have 500 teams, but will include the teams within that range of 500.)
     * @param pageNum Page number of results to return, zero-indexed 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamsKeys(pageNum: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<kotlin.String> {
+    fun getTeamsKeys(pageNum: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/teams/{page_num}/keys".replace("{"+"page_num"+"}", "$pageNum"),
@@ -1331,7 +1293,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 
@@ -1339,14 +1300,14 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
     * 
     * Gets a list of short form &#x60;Team_Simple&#x60; objects, paginated in groups of 500.
     * @param pageNum Page number of results to return, zero-indexed 
-    * @param ifModifiedSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional, default to null)
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<TeamSimple>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamsSimple(pageNum: kotlin.Int, ifModifiedSince: kotlin.String) : kotlin.Array<TeamSimple> {
+    fun getTeamsSimple(pageNum: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<TeamSimple> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifModifiedSince.toString())
+        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/teams/{page_num}/simple".replace("{"+"page_num"+"}", "$pageNum"),
@@ -1364,7 +1325,6 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
             ResponseType.Redirection -> TODO()
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
-            else -> throw kotlin.IllegalStateException("Undefined ResponseType.")
         }
     }
 

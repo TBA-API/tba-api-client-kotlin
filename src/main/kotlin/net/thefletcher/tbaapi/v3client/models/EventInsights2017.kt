@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * Insights for FIRST STEAMWORKS qualification and elimination matches.
  * @param averageFoulScore Average foul score.
@@ -49,68 +50,100 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class EventInsights2017 (
     /* Average foul score. */
+    @Json(name = "average_foul_score")
     val averageFoulScore: kotlin.Float,
     /* Average fuel points scored. */
+    @Json(name = "average_fuel_points")
     val averageFuelPoints: kotlin.Float,
     /* Average fuel points scored during auto. */
+    @Json(name = "average_fuel_points_auto")
     val averageFuelPointsAuto: kotlin.Float,
     /* Average fuel points scored during teleop. */
+    @Json(name = "average_fuel_points_teleop")
     val averageFuelPointsTeleop: kotlin.Float,
     /* Average points scored in the high goal. */
+    @Json(name = "average_high_goals")
     val averageHighGoals: kotlin.Float,
     /* Average points scored in the high goal during auto. */
+    @Json(name = "average_high_goals_auto")
     val averageHighGoalsAuto: kotlin.Float,
     /* Average points scored in the high goal during teleop. */
+    @Json(name = "average_high_goals_teleop")
     val averageHighGoalsTeleop: kotlin.Float,
     /* Average points scored in the low goal. */
+    @Json(name = "average_low_goals")
     val averageLowGoals: kotlin.Float,
     /* Average points scored in the low goal during auto. */
+    @Json(name = "average_low_goals_auto")
     val averageLowGoalsAuto: kotlin.Float,
     /* Average points scored in the low goal during teleop. */
+    @Json(name = "average_low_goals_teleop")
     val averageLowGoalsTeleop: kotlin.Float,
     /* Average mobility points scored during auto. */
+    @Json(name = "average_mobility_points_auto")
     val averageMobilityPointsAuto: kotlin.Float,
     /* Average points scored during auto. */
+    @Json(name = "average_points_auto")
     val averagePointsAuto: kotlin.Float,
     /* Average points scored during teleop. */
+    @Json(name = "average_points_teleop")
     val averagePointsTeleop: kotlin.Float,
     /* Average rotor points scored. */
+    @Json(name = "average_rotor_points")
     val averageRotorPoints: kotlin.Float,
     /* Average rotor points scored during auto. */
+    @Json(name = "average_rotor_points_auto")
     val averageRotorPointsAuto: kotlin.Float,
     /* Average rotor points scored during teleop. */
+    @Json(name = "average_rotor_points_teleop")
     val averageRotorPointsTeleop: kotlin.Float,
     /* Average score. */
+    @Json(name = "average_score")
     val averageScore: kotlin.Float,
     /* Average takeoff points scored during teleop. */
+    @Json(name = "average_takeoff_points_teleop")
     val averageTakeoffPointsTeleop: kotlin.Float,
     /* Average margin of victory. */
+    @Json(name = "average_win_margin")
     val averageWinMargin: kotlin.Float,
     /* Average winning score. */
+    @Json(name = "average_win_score")
     val averageWinScore: kotlin.Float,
     /* An array with three values, kPa scored, match key from the match with the high kPa, and the name of the match */
+    @Json(name = "high_kpa")
     val highKpa: kotlin.Array<kotlin.String>,
     /* An array with three values, high score, match key from the match with the high score, and the name of the match */
+    @Json(name = "high_score")
     val highScore: kotlin.Array<kotlin.String>,
     /* An array with three values, number of times kPa bonus achieved, number of opportunities to bonus, and percentage. */
+    @Json(name = "kpa_achieved")
     val kpaAchieved: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times mobility bonus achieved, number of opportunities to bonus, and percentage. */
+    @Json(name = "mobility_counts")
     val mobilityCounts: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times rotor 1 engaged, number of opportunities to engage, and percentage. */
+    @Json(name = "rotor_1_engaged")
     val rotor1Engaged: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times rotor 1 engaged in auto, number of opportunities to engage in auto, and percentage. */
+    @Json(name = "rotor_1_engaged_auto")
     val rotor1EngagedAuto: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times rotor 2 engaged, number of opportunities to engage, and percentage. */
+    @Json(name = "rotor_2_engaged")
     val rotor2Engaged: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times rotor 2 engaged in auto, number of opportunities to engage in auto, and percentage. */
+    @Json(name = "rotor_2_engaged_auto")
     val rotor2EngagedAuto: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times rotor 3 engaged, number of opportunities to engage, and percentage. */
+    @Json(name = "rotor_3_engaged")
     val rotor3Engaged: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times rotor 4 engaged, number of opportunities to engage, and percentage. */
+    @Json(name = "rotor_4_engaged")
     val rotor4Engaged: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times takeoff was counted, number of opportunities to takeoff, and percentage. */
+    @Json(name = "takeoff_counts")
     val takeoffCounts: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times a unicorn match (Win + kPa & Rotor Bonuses) occured, number of opportunities to have a unicorn match, and percentage. */
+    @Json(name = "unicorn_matches")
     val unicornMatches: kotlin.Array<kotlin.Float>
 ) {
 

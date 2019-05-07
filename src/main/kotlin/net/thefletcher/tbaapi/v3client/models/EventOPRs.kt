@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * OPR, DPR, and CCWM for teams at the event.
  * @param oprs A key-value pair with team key (eg `frc254`) as key and OPR as value.
@@ -20,10 +21,13 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class EventOPRs (
     /* A key-value pair with team key (eg `frc254`) as key and OPR as value. */
+    @Json(name = "oprs")
     val oprs: kotlin.collections.Map<kotlin.String, kotlin.Float>? = null,
     /* A key-value pair with team key (eg `frc254`) as key and DPR as value. */
+    @Json(name = "dprs")
     val dprs: kotlin.collections.Map<kotlin.String, kotlin.Float>? = null,
     /* A key-value pair with team key (eg `frc254`) as key and CCWM as value. */
+    @Json(name = "ccwms")
     val ccwms: kotlin.collections.Map<kotlin.String, kotlin.Float>? = null
 ) {
 

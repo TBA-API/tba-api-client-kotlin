@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * Insights for FIRST Stronghold qualification and elimination matches.
  * @param lowBar For the Low Bar - An array with three values, number of times damaged, number of opportunities to damage, and percentage.
@@ -41,52 +42,76 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class EventInsights2016 (
     /* For the Low Bar - An array with three values, number of times damaged, number of opportunities to damage, and percentage. */
+    @Json(name = "LowBar")
     val lowBar: kotlin.Array<kotlin.Float>,
     /* For the Cheval De Frise - An array with three values, number of times damaged, number of opportunities to damage, and percentage. */
+    @Json(name = "A_ChevalDeFrise")
     val aChevalDeFrise: kotlin.Array<kotlin.Float>,
     /* For the Portcullis - An array with three values, number of times damaged, number of opportunities to damage, and percentage. */
+    @Json(name = "A_Portcullis")
     val aPortcullis: kotlin.Array<kotlin.Float>,
     /* For the Ramparts - An array with three values, number of times damaged, number of opportunities to damage, and percentage. */
+    @Json(name = "B_Ramparts")
     val bRamparts: kotlin.Array<kotlin.Float>,
     /* For the Moat - An array with three values, number of times damaged, number of opportunities to damage, and percentage. */
+    @Json(name = "B_Moat")
     val bMoat: kotlin.Array<kotlin.Float>,
     /* For the Sally Port - An array with three values, number of times damaged, number of opportunities to damage, and percentage. */
+    @Json(name = "C_SallyPort")
     val cSallyPort: kotlin.Array<kotlin.Float>,
     /* For the Drawbridge - An array with three values, number of times damaged, number of opportunities to damage, and percentage. */
+    @Json(name = "C_Drawbridge")
     val cDrawbridge: kotlin.Array<kotlin.Float>,
     /* For the Rough Terrain - An array with three values, number of times damaged, number of opportunities to damage, and percentage. */
+    @Json(name = "D_RoughTerrain")
     val dRoughTerrain: kotlin.Array<kotlin.Float>,
     /* For the Rock Wall - An array with three values, number of times damaged, number of opportunities to damage, and percentage. */
+    @Json(name = "D_RockWall")
     val dRockWall: kotlin.Array<kotlin.Float>,
     /* Average number of high goals scored. */
+    @Json(name = "average_high_goals")
     val averageHighGoals: kotlin.Float,
     /* Average number of low goals scored. */
+    @Json(name = "average_low_goals")
     val averageLowGoals: kotlin.Float,
     /* An array with three values, number of times breached, number of opportunities to breach, and percentage. */
+    @Json(name = "breaches")
     val breaches: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times scaled, number of opportunities to scale, and percentage. */
+    @Json(name = "scales")
     val scales: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times challenged, number of opportunities to challenge, and percentage. */
+    @Json(name = "challenges")
     val challenges: kotlin.Array<kotlin.Float>,
     /* An array with three values, number of times captured, number of opportunities to capture, and percentage. */
+    @Json(name = "captures")
     val captures: kotlin.Array<kotlin.Float>,
     /* Average winning score. */
+    @Json(name = "average_win_score")
     val averageWinScore: kotlin.Float,
     /* Average margin of victory. */
+    @Json(name = "average_win_margin")
     val averageWinMargin: kotlin.Float,
     /* Average total score. */
+    @Json(name = "average_score")
     val averageScore: kotlin.Float,
     /* Average autonomous score. */
+    @Json(name = "average_auto_score")
     val averageAutoScore: kotlin.Float,
     /* Average crossing score. */
+    @Json(name = "average_crossing_score")
     val averageCrossingScore: kotlin.Float,
     /* Average boulder score. */
+    @Json(name = "average_boulder_score")
     val averageBoulderScore: kotlin.Float,
     /* Average tower score. */
+    @Json(name = "average_tower_score")
     val averageTowerScore: kotlin.Float,
     /* Average foul score. */
+    @Json(name = "average_foul_score")
     val averageFoulScore: kotlin.Float,
     /* An array with three values, high score, match key from the match with the high score, and the name of the match. */
+    @Json(name = "high_score")
     val highScore: kotlin.Array<kotlin.String>
 ) {
 

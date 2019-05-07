@@ -13,6 +13,7 @@ package net.thefletcher.tbaapi.v3client.models
 
 import net.thefletcher.tbaapi.v3client.models.AwardRecipient
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param name The name of the award as provided by FIRST. May vary for the same award type.
@@ -23,14 +24,19 @@ import net.thefletcher.tbaapi.v3client.models.AwardRecipient
  */
 data class Award (
     /* The name of the award as provided by FIRST. May vary for the same award type. */
+    @Json(name = "name")
     val name: kotlin.String,
     /* Type of award given. See https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/award_type.py#L6 */
+    @Json(name = "award_type")
     val awardType: kotlin.Int,
     /* The event_key of the event the award was won at. */
+    @Json(name = "event_key")
     val eventKey: kotlin.String,
     /* A list of recipients of the award at the event. May have either a team_key or an awardee, both, or neither (in the case the award wasn't awarded at the event). */
+    @Json(name = "recipient_list")
     val recipientList: kotlin.Array<AwardRecipient>,
     /* The year this award was won. */
+    @Json(name = "year")
     val year: kotlin.Int
 ) {
 

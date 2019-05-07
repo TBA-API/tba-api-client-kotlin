@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param minAppVersion Internal use - Minimum application version required to correctly connect and process data.
@@ -19,8 +20,10 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class APIStatusAppVersion (
     /* Internal use - Minimum application version required to correctly connect and process data. */
+    @Json(name = "min_app_version")
     val minAppVersion: kotlin.Int,
     /* Internal use - Latest application version available. */
+    @Json(name = "latest_app_version")
     val latestAppVersion: kotlin.Int
 ) {
 

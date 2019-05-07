@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * 
  * @param score Score for this alliance. Will be null or -1 for an unplayed match.
@@ -21,11 +22,15 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class MatchAlliance (
     /* Score for this alliance. Will be null or -1 for an unplayed match. */
+    @Json(name = "score")
     val score: kotlin.Int,
+    @Json(name = "team_keys")
     val teamKeys: kotlin.Array<kotlin.String>,
     /* TBA team keys (eg `frc254`) of any teams playing as a surrogate. */
+    @Json(name = "surrogate_team_keys")
     val surrogateTeamKeys: kotlin.Array<kotlin.String>? = null,
     /* TBA team keys (eg `frc254`) of any disqualified teams. */
+    @Json(name = "dq_team_keys")
     val dqTeamKeys: kotlin.Array<kotlin.String>? = null
 ) {
 

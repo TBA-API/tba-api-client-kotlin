@@ -43,7 +43,7 @@ Method | HTTP request | Description
 
 <a name="getDistrictEvents"></a>
 # **getDistrictEvents**
-> kotlin.Array&lt;Event&gt; getDistrictEvents(districtKey, ifModifiedSince)
+> kotlin.Array&lt;Event&gt; getDistrictEvents(districtKey, ifMinusModifiedMinusSince)
 
 
 
@@ -57,9 +57,9 @@ Gets a list of events in the given district.
 
 val apiInstance = EventApi()
 val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Event> = apiInstance.getDistrictEvents(districtKey, ifModifiedSince)
+    val result : kotlin.Array<Event> = apiInstance.getDistrictEvents(districtKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getDistrictEvents")
@@ -74,8 +74,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictEventsKeys"></a>
 # **getDistrictEventsKeys**
-> kotlin.Array&lt;kotlin.String&gt; getDistrictEventsKeys(districtKey, ifModifiedSince)
+> kotlin.Array&lt;kotlin.String&gt; getDistrictEventsKeys(districtKey, ifMinusModifiedMinusSince)
 
 
 
@@ -106,9 +106,9 @@ Gets a list of event keys for events in the given district.
 
 val apiInstance = EventApi()
 val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getDistrictEventsKeys(districtKey, ifModifiedSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getDistrictEventsKeys(districtKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getDistrictEventsKeys")
@@ -123,8 +123,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictEventsSimple"></a>
 # **getDistrictEventsSimple**
-> kotlin.Array&lt;EventSimple&gt; getDistrictEventsSimple(districtKey, ifModifiedSince)
+> kotlin.Array&lt;EventSimple&gt; getDistrictEventsSimple(districtKey, ifMinusModifiedMinusSince)
 
 
 
@@ -155,9 +155,9 @@ Gets a short-form list of events in the given district.
 
 val apiInstance = EventApi()
 val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<EventSimple> = apiInstance.getDistrictEventsSimple(districtKey, ifModifiedSince)
+    val result : kotlin.Array<EventSimple> = apiInstance.getDistrictEventsSimple(districtKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getDistrictEventsSimple")
@@ -172,8 +172,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 <a name="getEvent"></a>
 # **getEvent**
-> Event getEvent(eventKey, ifModifiedSince)
+> Event getEvent(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -204,9 +204,9 @@ Gets an Event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : Event = apiInstance.getEvent(eventKey, ifModifiedSince)
+    val result : Event = apiInstance.getEvent(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEvent")
@@ -221,8 +221,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventAlliances"></a>
 # **getEventAlliances**
-> kotlin.Array&lt;EliminationAlliance&gt; getEventAlliances(eventKey, ifModifiedSince)
+> kotlin.Array&lt;EliminationAlliance&gt; getEventAlliances(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -253,9 +253,9 @@ Gets a list of Elimination Alliances for the given Event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<EliminationAlliance> = apiInstance.getEventAlliances(eventKey, ifModifiedSince)
+    val result : kotlin.Array<EliminationAlliance> = apiInstance.getEventAlliances(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventAlliances")
@@ -270,8 +270,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventAwards"></a>
 # **getEventAwards**
-> kotlin.Array&lt;Award&gt; getEventAwards(eventKey, ifModifiedSince)
+> kotlin.Array&lt;Award&gt; getEventAwards(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -302,9 +302,9 @@ Gets a list of awards from the given event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Award> = apiInstance.getEventAwards(eventKey, ifModifiedSince)
+    val result : kotlin.Array<Award> = apiInstance.getEventAwards(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventAwards")
@@ -319,8 +319,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventDistrictPoints"></a>
 # **getEventDistrictPoints**
-> EventDistrictPoints getEventDistrictPoints(eventKey, ifModifiedSince)
+> EventDistrictPoints getEventDistrictPoints(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -351,9 +351,9 @@ Gets a list of team rankings for the Event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : EventDistrictPoints = apiInstance.getEventDistrictPoints(eventKey, ifModifiedSince)
+    val result : EventDistrictPoints = apiInstance.getEventDistrictPoints(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventDistrictPoints")
@@ -368,8 +368,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventInsights"></a>
 # **getEventInsights**
-> EventInsights getEventInsights(eventKey, ifModifiedSince)
+> EventInsights getEventInsights(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -400,9 +400,9 @@ Gets a set of Event-specific insights for the given Event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : EventInsights = apiInstance.getEventInsights(eventKey, ifModifiedSince)
+    val result : EventInsights = apiInstance.getEventInsights(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventInsights")
@@ -417,8 +417,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -435,7 +435,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventMatchTimeseries"></a>
 # **getEventMatchTimeseries**
-> kotlin.Array&lt;kotlin.String&gt; getEventMatchTimeseries(eventKey, ifModifiedSince)
+> kotlin.Array&lt;kotlin.String&gt; getEventMatchTimeseries(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -449,9 +449,9 @@ Gets an array of Match Keys for the given event key that have timeseries data. R
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getEventMatchTimeseries(eventKey, ifModifiedSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getEventMatchTimeseries(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventMatchTimeseries")
@@ -466,8 +466,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventMatches"></a>
 # **getEventMatches**
-> kotlin.Array&lt;Match&gt; getEventMatches(eventKey, ifModifiedSince)
+> kotlin.Array&lt;Match&gt; getEventMatches(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -498,9 +498,9 @@ Gets a list of matches for the given event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Match> = apiInstance.getEventMatches(eventKey, ifModifiedSince)
+    val result : kotlin.Array<Match> = apiInstance.getEventMatches(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventMatches")
@@ -515,8 +515,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -533,7 +533,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventMatchesKeys"></a>
 # **getEventMatchesKeys**
-> kotlin.Array&lt;kotlin.String&gt; getEventMatchesKeys(eventKey, ifModifiedSince)
+> kotlin.Array&lt;kotlin.String&gt; getEventMatchesKeys(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -547,9 +547,9 @@ Gets a list of match keys for the given event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getEventMatchesKeys(eventKey, ifModifiedSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getEventMatchesKeys(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventMatchesKeys")
@@ -564,8 +564,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -582,7 +582,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventMatchesSimple"></a>
 # **getEventMatchesSimple**
-> kotlin.Array&lt;MatchSimple&gt; getEventMatchesSimple(eventKey, ifModifiedSince)
+> kotlin.Array&lt;MatchSimple&gt; getEventMatchesSimple(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -596,9 +596,9 @@ Gets a short-form list of matches for the given event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<MatchSimple> = apiInstance.getEventMatchesSimple(eventKey, ifModifiedSince)
+    val result : kotlin.Array<MatchSimple> = apiInstance.getEventMatchesSimple(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventMatchesSimple")
@@ -613,8 +613,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -631,7 +631,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventOPRs"></a>
 # **getEventOPRs**
-> EventOPRs getEventOPRs(eventKey, ifModifiedSince)
+> EventOPRs getEventOPRs(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -645,9 +645,9 @@ Gets a set of Event OPRs (including OPR, DPR, and CCWM) for the given Event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : EventOPRs = apiInstance.getEventOPRs(eventKey, ifModifiedSince)
+    val result : EventOPRs = apiInstance.getEventOPRs(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventOPRs")
@@ -662,8 +662,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -680,7 +680,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventPredictions"></a>
 # **getEventPredictions**
-> kotlin.Any getEventPredictions(eventKey, ifModifiedSince)
+> kotlin.Any getEventPredictions(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -694,9 +694,9 @@ Gets information on TBA-generated predictions for the given Event. Contains year
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Any = apiInstance.getEventPredictions(eventKey, ifModifiedSince)
+    val result : kotlin.Any = apiInstance.getEventPredictions(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventPredictions")
@@ -711,8 +711,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -729,7 +729,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventRankings"></a>
 # **getEventRankings**
-> EventRanking getEventRankings(eventKey, ifModifiedSince)
+> EventRanking getEventRankings(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -743,9 +743,9 @@ Gets a list of team rankings for the Event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : EventRanking = apiInstance.getEventRankings(eventKey, ifModifiedSince)
+    val result : EventRanking = apiInstance.getEventRankings(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventRankings")
@@ -760,8 +760,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -778,7 +778,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventSimple"></a>
 # **getEventSimple**
-> EventSimple getEventSimple(eventKey, ifModifiedSince)
+> EventSimple getEventSimple(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -792,9 +792,9 @@ Gets a short-form Event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : EventSimple = apiInstance.getEventSimple(eventKey, ifModifiedSince)
+    val result : EventSimple = apiInstance.getEventSimple(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventSimple")
@@ -809,8 +809,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -827,7 +827,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventTeams"></a>
 # **getEventTeams**
-> kotlin.Array&lt;Team&gt; getEventTeams(eventKey, ifModifiedSince)
+> kotlin.Array&lt;Team&gt; getEventTeams(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -841,9 +841,9 @@ Gets a list of &#x60;Team&#x60; objects that competed in the given event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Team> = apiInstance.getEventTeams(eventKey, ifModifiedSince)
+    val result : kotlin.Array<Team> = apiInstance.getEventTeams(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventTeams")
@@ -858,8 +858,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -876,7 +876,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventTeamsKeys"></a>
 # **getEventTeamsKeys**
-> kotlin.Array&lt;kotlin.String&gt; getEventTeamsKeys(eventKey, ifModifiedSince)
+> kotlin.Array&lt;kotlin.String&gt; getEventTeamsKeys(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -890,9 +890,9 @@ Gets a list of &#x60;Team&#x60; keys that competed in the given event.
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getEventTeamsKeys(eventKey, ifModifiedSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getEventTeamsKeys(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventTeamsKeys")
@@ -907,8 +907,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -925,7 +925,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventTeamsSimple"></a>
 # **getEventTeamsSimple**
-> kotlin.Array&lt;TeamSimple&gt; getEventTeamsSimple(eventKey, ifModifiedSince)
+> kotlin.Array&lt;TeamSimple&gt; getEventTeamsSimple(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -939,9 +939,9 @@ Gets a short-form list of &#x60;Team&#x60; objects that competed in the given ev
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<TeamSimple> = apiInstance.getEventTeamsSimple(eventKey, ifModifiedSince)
+    val result : kotlin.Array<TeamSimple> = apiInstance.getEventTeamsSimple(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventTeamsSimple")
@@ -956,8 +956,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -974,7 +974,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventTeamsStatuses"></a>
 # **getEventTeamsStatuses**
-> kotlin.collections.Map&lt;kotlin.String, TeamEventStatus&gt; getEventTeamsStatuses(eventKey, ifModifiedSince)
+> kotlin.collections.Map&lt;kotlin.String, TeamEventStatus&gt; getEventTeamsStatuses(eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -988,9 +988,9 @@ Gets a key-value list of the event statuses for teams competing at the given eve
 
 val apiInstance = EventApi()
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.collections.Map<kotlin.String, TeamEventStatus> = apiInstance.getEventTeamsStatuses(eventKey, ifModifiedSince)
+    val result : kotlin.collections.Map<kotlin.String, TeamEventStatus> = apiInstance.getEventTeamsStatuses(eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventTeamsStatuses")
@@ -1005,8 +1005,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1023,7 +1023,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventsByYear"></a>
 # **getEventsByYear**
-> kotlin.Array&lt;Event&gt; getEventsByYear(year, ifModifiedSince)
+> kotlin.Array&lt;Event&gt; getEventsByYear(year, ifMinusModifiedMinusSince)
 
 
 
@@ -1037,9 +1037,9 @@ Gets a list of events in the given year.
 
 val apiInstance = EventApi()
 val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Event> = apiInstance.getEventsByYear(year, ifModifiedSince)
+    val result : kotlin.Array<Event> = apiInstance.getEventsByYear(year, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventsByYear")
@@ -1054,8 +1054,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1072,7 +1072,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventsByYearKeys"></a>
 # **getEventsByYearKeys**
-> kotlin.Array&lt;kotlin.String&gt; getEventsByYearKeys(year, ifModifiedSince)
+> kotlin.Array&lt;kotlin.String&gt; getEventsByYearKeys(year, ifMinusModifiedMinusSince)
 
 
 
@@ -1086,9 +1086,9 @@ Gets a list of event keys in the given year.
 
 val apiInstance = EventApi()
 val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getEventsByYearKeys(year, ifModifiedSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getEventsByYearKeys(year, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventsByYearKeys")
@@ -1103,8 +1103,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1121,7 +1121,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventsByYearSimple"></a>
 # **getEventsByYearSimple**
-> kotlin.Array&lt;EventSimple&gt; getEventsByYearSimple(year, ifModifiedSince)
+> kotlin.Array&lt;EventSimple&gt; getEventsByYearSimple(year, ifMinusModifiedMinusSince)
 
 
 
@@ -1135,9 +1135,9 @@ Gets a short-form list of events in the given year.
 
 val apiInstance = EventApi()
 val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<EventSimple> = apiInstance.getEventsByYearSimple(year, ifModifiedSince)
+    val result : kotlin.Array<EventSimple> = apiInstance.getEventsByYearSimple(year, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getEventsByYearSimple")
@@ -1152,8 +1152,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1170,7 +1170,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventAwards"></a>
 # **getTeamEventAwards**
-> kotlin.Array&lt;Award&gt; getTeamEventAwards(teamKey, eventKey, ifModifiedSince)
+> kotlin.Array&lt;Award&gt; getTeamEventAwards(teamKey, eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -1185,9 +1185,9 @@ Gets a list of awards the given team won at the given event.
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Award> = apiInstance.getTeamEventAwards(teamKey, eventKey, ifModifiedSince)
+    val result : kotlin.Array<Award> = apiInstance.getTeamEventAwards(teamKey, eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEventAwards")
@@ -1202,9 +1202,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1221,7 +1221,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventMatches"></a>
 # **getTeamEventMatches**
-> kotlin.Array&lt;Match&gt; getTeamEventMatches(teamKey, eventKey, ifModifiedSince)
+> kotlin.Array&lt;Match&gt; getTeamEventMatches(teamKey, eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -1236,9 +1236,9 @@ Gets a list of matches for the given team and event.
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Match> = apiInstance.getTeamEventMatches(teamKey, eventKey, ifModifiedSince)
+    val result : kotlin.Array<Match> = apiInstance.getTeamEventMatches(teamKey, eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEventMatches")
@@ -1253,9 +1253,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1272,7 +1272,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventMatchesKeys"></a>
 # **getTeamEventMatchesKeys**
-> kotlin.Array&lt;kotlin.String&gt; getTeamEventMatchesKeys(teamKey, eventKey, ifModifiedSince)
+> kotlin.Array&lt;kotlin.String&gt; getTeamEventMatchesKeys(teamKey, eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -1287,9 +1287,9 @@ Gets a list of match keys for matches for the given team and event.
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getTeamEventMatchesKeys(teamKey, eventKey, ifModifiedSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getTeamEventMatchesKeys(teamKey, eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEventMatchesKeys")
@@ -1304,9 +1304,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1323,7 +1323,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventMatchesSimple"></a>
 # **getTeamEventMatchesSimple**
-> kotlin.Array&lt;Match&gt; getTeamEventMatchesSimple(teamKey, eventKey, ifModifiedSince)
+> kotlin.Array&lt;Match&gt; getTeamEventMatchesSimple(teamKey, eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -1338,9 +1338,9 @@ Gets a short-form list of matches for the given team and event.
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Match> = apiInstance.getTeamEventMatchesSimple(teamKey, eventKey, ifModifiedSince)
+    val result : kotlin.Array<Match> = apiInstance.getTeamEventMatchesSimple(teamKey, eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEventMatchesSimple")
@@ -1355,9 +1355,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1374,7 +1374,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventStatus"></a>
 # **getTeamEventStatus**
-> TeamEventStatus getTeamEventStatus(teamKey, eventKey, ifModifiedSince)
+> TeamEventStatus getTeamEventStatus(teamKey, eventKey, ifMinusModifiedMinusSince)
 
 
 
@@ -1389,9 +1389,9 @@ Gets the competition rank and status of the team at the given event.
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
 val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : TeamEventStatus = apiInstance.getTeamEventStatus(teamKey, eventKey, ifModifiedSince)
+    val result : TeamEventStatus = apiInstance.getTeamEventStatus(teamKey, eventKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEventStatus")
@@ -1406,9 +1406,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1425,7 +1425,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEvents"></a>
 # **getTeamEvents**
-> kotlin.Array&lt;Event&gt; getTeamEvents(teamKey, ifModifiedSince)
+> kotlin.Array&lt;Event&gt; getTeamEvents(teamKey, ifMinusModifiedMinusSince)
 
 
 
@@ -1439,9 +1439,9 @@ Gets a list of all events this team has competed at.
 
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Event> = apiInstance.getTeamEvents(teamKey, ifModifiedSince)
+    val result : kotlin.Array<Event> = apiInstance.getTeamEvents(teamKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEvents")
@@ -1456,8 +1456,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1474,7 +1474,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventsByYear"></a>
 # **getTeamEventsByYear**
-> kotlin.Array&lt;Event&gt; getTeamEventsByYear(teamKey, year, ifModifiedSince)
+> kotlin.Array&lt;Event&gt; getTeamEventsByYear(teamKey, year, ifMinusModifiedMinusSince)
 
 
 
@@ -1489,9 +1489,9 @@ Gets a list of events this team has competed at in the given year.
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
 val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Event> = apiInstance.getTeamEventsByYear(teamKey, year, ifModifiedSince)
+    val result : kotlin.Array<Event> = apiInstance.getTeamEventsByYear(teamKey, year, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEventsByYear")
@@ -1506,9 +1506,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1525,7 +1525,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventsByYearKeys"></a>
 # **getTeamEventsByYearKeys**
-> kotlin.Array&lt;kotlin.String&gt; getTeamEventsByYearKeys(teamKey, year, ifModifiedSince)
+> kotlin.Array&lt;kotlin.String&gt; getTeamEventsByYearKeys(teamKey, year, ifMinusModifiedMinusSince)
 
 
 
@@ -1540,9 +1540,9 @@ Gets a list of the event keys for events this team has competed at in the given 
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
 val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getTeamEventsByYearKeys(teamKey, year, ifModifiedSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getTeamEventsByYearKeys(teamKey, year, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEventsByYearKeys")
@@ -1557,9 +1557,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1576,7 +1576,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventsByYearSimple"></a>
 # **getTeamEventsByYearSimple**
-> kotlin.Array&lt;EventSimple&gt; getTeamEventsByYearSimple(teamKey, year, ifModifiedSince)
+> kotlin.Array&lt;EventSimple&gt; getTeamEventsByYearSimple(teamKey, year, ifMinusModifiedMinusSince)
 
 
 
@@ -1591,9 +1591,9 @@ Gets a short-form list of events this team has competed at in the given year.
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
 val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<EventSimple> = apiInstance.getTeamEventsByYearSimple(teamKey, year, ifModifiedSince)
+    val result : kotlin.Array<EventSimple> = apiInstance.getTeamEventsByYearSimple(teamKey, year, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEventsByYearSimple")
@@ -1608,9 +1608,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1627,7 +1627,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventsKeys"></a>
 # **getTeamEventsKeys**
-> kotlin.Array&lt;kotlin.String&gt; getTeamEventsKeys(teamKey, ifModifiedSince)
+> kotlin.Array&lt;kotlin.String&gt; getTeamEventsKeys(teamKey, ifMinusModifiedMinusSince)
 
 
 
@@ -1641,9 +1641,9 @@ Gets a list of the event keys for all events this team has competed at.
 
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getTeamEventsKeys(teamKey, ifModifiedSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getTeamEventsKeys(teamKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEventsKeys")
@@ -1658,8 +1658,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1676,7 +1676,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventsSimple"></a>
 # **getTeamEventsSimple**
-> kotlin.Array&lt;EventSimple&gt; getTeamEventsSimple(teamKey, ifModifiedSince)
+> kotlin.Array&lt;EventSimple&gt; getTeamEventsSimple(teamKey, ifMinusModifiedMinusSince)
 
 
 
@@ -1690,9 +1690,9 @@ Gets a short-form list of all events this team has competed at.
 
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<EventSimple> = apiInstance.getTeamEventsSimple(teamKey, ifModifiedSince)
+    val result : kotlin.Array<EventSimple> = apiInstance.getTeamEventsSimple(teamKey, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEventsSimple")
@@ -1707,8 +1707,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -1725,7 +1725,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventsStatusesByYear"></a>
 # **getTeamEventsStatusesByYear**
-> kotlin.collections.Map&lt;kotlin.String, TeamEventStatus&gt; getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince)
+> kotlin.collections.Map&lt;kotlin.String, TeamEventStatus&gt; getTeamEventsStatusesByYear(teamKey, year, ifMinusModifiedMinusSince)
 
 
 
@@ -1740,9 +1740,9 @@ Gets a key-value list of the event statuses for events this team has competed at
 val apiInstance = EventApi()
 val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
 val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
-val ifModifiedSince : kotlin.String = ifModifiedSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.collections.Map<kotlin.String, TeamEventStatus> = apiInstance.getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince)
+    val result : kotlin.collections.Map<kotlin.String, TeamEventStatus> = apiInstance.getTeamEventsStatusesByYear(teamKey, year, ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling EventApi#getTeamEventsStatusesByYear")
@@ -1757,9 +1757,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; | [default to null]
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. | [default to null]
- **ifModifiedSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional] [default to null]
+ **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 

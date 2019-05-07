@@ -33,29 +33,42 @@ import com.squareup.moshi.Json
  */
 data class Match (
     /* TBA match key with the format `yyyy[EVENT_CODE]_[COMP_LEVEL]m[MATCH_NUMBER]`, where `yyyy` is the year, and `EVENT_CODE` is the event code of the event, `COMP_LEVEL` is (qm, ef, qf, sf, f), and `MATCH_NUMBER` is the match number in the competition level. A set number may be appended to the competition level if more than one match in required per set. */
+    @Json(name = "key")
     val key: kotlin.String,
     /* The competition level the match was played at. */
+    @Json(name = "comp_level")
     val compLevel: Match.CompLevel,
     /* The set number in a series of matches where more than one match is required in the match series. */
+    @Json(name = "set_number")
     val setNumber: kotlin.Int,
     /* The match number of the match in the competition level. */
+    @Json(name = "match_number")
     val matchNumber: kotlin.Int,
     /* Event key of the event the match was played at. */
+    @Json(name = "event_key")
     val eventKey: kotlin.String,
+    @Json(name = "alliances")
     val alliances: MatchSimpleAlliances? = null,
     /* The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie. */
+    @Json(name = "winning_alliance")
     val winningAlliance: kotlin.String? = null,
     /* UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the scheduled match time, as taken from the published schedule. */
+    @Json(name = "time")
     val time: kotlin.Long? = null,
     /* UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time. */
+    @Json(name = "actual_time")
     val actualTime: kotlin.Long? = null,
     /* UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the TBA predicted match start time. */
+    @Json(name = "predicted_time")
     val predictedTime: kotlin.Long? = null,
     /* UNIX timestamp (seconds since 1-Jan-1970 00:00:00) when the match result was posted. */
+    @Json(name = "post_result_time")
     val postResultTime: kotlin.Long? = null,
     /* Score breakdown for auto, teleop, etc. points. Varies from year to year. May be null. */
+    @Json(name = "score_breakdown")
     val scoreBreakdown: kotlin.Any? = null,
     /* Array of video objects associated with this match. */
+    @Json(name = "videos")
     val videos: kotlin.Array<MatchVideos>? = null
 ) {
 
@@ -65,15 +78,20 @@ data class Match (
     */
     enum class CompLevel(val value: kotlin.String){
     
-        @Json(name = "qm") qm("qm"),
+        @Json(name = "qm")
+        qm("qm"),
     
-        @Json(name = "ef") ef("ef"),
+        @Json(name = "ef")
+        ef("ef"),
     
-        @Json(name = "qf") qf("qf"),
+        @Json(name = "qf")
+        qf("qf"),
     
-        @Json(name = "sf") sf("sf"),
+        @Json(name = "sf")
+        sf("sf"),
     
-        @Json(name = "f") f("f");
+        @Json(name = "f")
+        f("f");
     
     }
 

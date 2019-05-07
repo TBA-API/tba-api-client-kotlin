@@ -12,6 +12,7 @@
 package net.thefletcher.tbaapi.v3client.models
 
 
+import com.squareup.moshi.Json
 /**
  * Backup team called in, may be null.
  * @param &#x60;in&#x60; Team key that was called in as the backup.
@@ -19,8 +20,10 @@ package net.thefletcher.tbaapi.v3client.models
  */
 data class EliminationAllianceBackup (
     /* Team key that was called in as the backup. */
+    @Json(name = "in")
     val `in`: kotlin.String? = null,
     /* Team key that was replaced by the backup team. */
+    @Json(name = "out")
     val `out`: kotlin.String? = null
 ) {
 
