@@ -11,7 +11,7 @@
 */
 package net.thefletcher.tbaapi.v3client.models
 
-import net.thefletcher.tbaapi.v3client.models.MatchSimpleAlliances
+import net.thefletcher.tbaapi.v3client.models.MatchAlliances
 
 import com.squareup.moshi.Json
 /**
@@ -44,7 +44,7 @@ data class MatchSimple (
     @Json(name = "event_key")
     val eventKey: kotlin.String,
     @Json(name = "alliances")
-    val alliances: MatchSimpleAlliances? = null,
+    val alliances: MatchAlliances? = null,
     /* The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie. */
     @Json(name = "winning_alliance")
     val winningAlliance: MatchSimple.WinningAlliance? = null,

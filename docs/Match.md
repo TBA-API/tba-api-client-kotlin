@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **compLevel** | [**inline**](#CompLevelEnum) | The competition level the match was played at. | 
 **setNumber** | **kotlin.Int** | The set number in a series of matches where more than one match is required in the match series. | 
 **matchNumber** | **kotlin.Int** | The match number of the match in the competition level. | 
-**alliances** | [**MatchSimpleAlliances**](MatchSimpleAlliances.md) |  |  [optional]
+**alliances** | [**MatchAlliances**](MatchAlliances.md) |  |  [optional]
 **winningAlliance** | **kotlin.String** | The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie. |  [optional]
 **eventKey** | **kotlin.String** | Event key of the event the match was played at. | 
 **time** | **kotlin.Long** | UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the scheduled match time, as taken from the published schedule. |  [optional]
