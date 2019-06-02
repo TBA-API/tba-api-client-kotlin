@@ -11,6 +11,6 @@ package net.thefletcher.tbaapi.v3client.infrastructure
 data class RequestConfig(
     val method: RequestMethod,
     val path: String,
-    val headers: Map<String, String> = mapOf(),
+    val headers: MutableMap<String, String> = mutableMapOf(),
     val query: Map<String, List<String>> = mapOf()
 )
