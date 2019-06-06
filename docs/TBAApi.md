@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getStatus"></a>
 # **getStatus**
-> APIStatus getStatus()
+> APIStatus getStatus(ifMinusModifiedMinusSince)
 
 
 
@@ -22,8 +22,9 @@ Returns API status, and TBA status information.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = TBAApi()
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : APIStatus = apiInstance.getStatus()
+    val result : APIStatus = apiInstance.getStatus(ifMinusModifiedMinusSince)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling TBAApi#getStatus")
@@ -35,7 +36,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 

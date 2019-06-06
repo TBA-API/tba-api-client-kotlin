@@ -30,13 +30,14 @@ class TBAApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3")
     /**
     * 
     * Returns API status, and TBA status information.
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return APIStatus
     */
     @Suppress("UNCHECKED_CAST")
-    fun getStatus() : APIStatus {
+    fun getStatus(ifMinusModifiedMinusSince: kotlin.String?) : APIStatus {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/status",

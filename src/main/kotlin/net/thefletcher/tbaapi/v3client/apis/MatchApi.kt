@@ -31,16 +31,18 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
+    * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getEventMatchTimeseries() : kotlin.Array<kotlin.String> {
+    fun getEventMatchTimeseries(eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/event/{event_key}/matches/timeseries",
+            "/event/{event_key}/matches/timeseries".replace("{"+"event_key"+"}", "$eventKey"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -61,16 +63,18 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets a list of matches for the given event.
+    * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Match>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getEventMatches() : kotlin.Array<Match> {
+    fun getEventMatches(eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Match> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/event/{event_key}/matches",
+            "/event/{event_key}/matches".replace("{"+"event_key"+"}", "$eventKey"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -91,16 +95,18 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets a list of match keys for the given event.
+    * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getEventMatchesKeys() : kotlin.Array<kotlin.String> {
+    fun getEventMatchesKeys(eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/event/{event_key}/matches/keys",
+            "/event/{event_key}/matches/keys".replace("{"+"event_key"+"}", "$eventKey"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -121,16 +127,18 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets a short-form list of matches for the given event.
+    * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<MatchSimple>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getEventMatchesSimple() : kotlin.Array<MatchSimple> {
+    fun getEventMatchesSimple(eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<MatchSimple> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/event/{event_key}/matches/simple",
+            "/event/{event_key}/matches/simple".replace("{"+"event_key"+"}", "$eventKey"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -151,16 +159,18 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets a &#x60;Match&#x60; object for the given match key.
+    * @param matchKey TBA Match Key, eg &#x60;2016nytr_qm1&#x60; 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return Match
     */
     @Suppress("UNCHECKED_CAST")
-    fun getMatch() : Match {
+    fun getMatch(matchKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : Match {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/match/{match_key}",
+            "/match/{match_key}".replace("{"+"match_key"+"}", "$matchKey"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -181,16 +191,18 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets a short-form &#x60;Match&#x60; object for the given match key.
+    * @param matchKey TBA Match Key, eg &#x60;2016nytr_qm1&#x60; 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return MatchSimple
     */
     @Suppress("UNCHECKED_CAST")
-    fun getMatchSimple() : MatchSimple {
+    fun getMatchSimple(matchKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : MatchSimple {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/match/{match_key}/simple",
+            "/match/{match_key}/simple".replace("{"+"match_key"+"}", "$matchKey"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -211,16 +223,18 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets an array of game-specific Match Timeseries objects for the given match key or an empty array if not available. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
+    * @param matchKey TBA Match Key, eg &#x60;2016nytr_qm1&#x60; 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.Any>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getMatchTimeseries() : kotlin.Array<kotlin.Any> {
+    fun getMatchTimeseries(matchKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.Any> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/match/{match_key}/timeseries",
+            "/match/{match_key}/timeseries".replace("{"+"match_key"+"}", "$matchKey"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -241,16 +255,19 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets a list of matches for the given team and event.
+    * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
+    * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Match>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventMatches() : kotlin.Array<Match> {
+    fun getTeamEventMatches(teamKey: kotlin.String, eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Match> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/team/{team_key}/event/{event_key}/matches",
+            "/team/{team_key}/event/{event_key}/matches".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"event_key"+"}", "$eventKey"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -271,16 +288,19 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets a list of match keys for matches for the given team and event.
+    * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
+    * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventMatchesKeys() : kotlin.Array<kotlin.String> {
+    fun getTeamEventMatchesKeys(teamKey: kotlin.String, eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/team/{team_key}/event/{event_key}/matches/keys",
+            "/team/{team_key}/event/{event_key}/matches/keys".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"event_key"+"}", "$eventKey"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -301,16 +321,19 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets a short-form list of matches for the given team and event.
+    * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
+    * @param eventKey TBA Event Key, eg &#x60;2016nytr&#x60; 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Match>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamEventMatchesSimple() : kotlin.Array<Match> {
+    fun getTeamEventMatchesSimple(teamKey: kotlin.String, eventKey: kotlin.String, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Match> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/team/{team_key}/event/{event_key}/matches/simple",
+            "/team/{team_key}/event/{event_key}/matches/simple".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"event_key"+"}", "$eventKey"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -331,16 +354,19 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets a list of matches for the given team and year.
+    * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
+    * @param year Competition Year (or Season). Must be 4 digits. 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<Match>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamMatchesByYear() : kotlin.Array<Match> {
+    fun getTeamMatchesByYear(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<Match> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/team/{team_key}/matches/{year}",
+            "/team/{team_key}/matches/{year}".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -361,16 +387,19 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets a list of match keys for matches for the given team and year.
+    * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
+    * @param year Competition Year (or Season). Must be 4 digits. 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<kotlin.String>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamMatchesByYearKeys() : kotlin.Array<kotlin.String> {
+    fun getTeamMatchesByYearKeys(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<kotlin.String> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/team/{team_key}/matches/{year}/keys",
+            "/team/{team_key}/matches/{year}/keys".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
@@ -391,16 +420,19 @@ class MatchApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3
     /**
     * 
     * Gets a short-form list of matches for the given team and year.
+    * @param teamKey TBA Team Key, eg &#x60;frc254&#x60; 
+    * @param year Competition Year (or Season). Must be 4 digits. 
+    * @param ifMinusModifiedMinusSince Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. (optional)
     * @return kotlin.Array<MatchSimple>
     */
     @Suppress("UNCHECKED_CAST")
-    fun getTeamMatchesByYearSimple() : kotlin.Array<MatchSimple> {
+    fun getTeamMatchesByYearSimple(teamKey: kotlin.String, year: kotlin.Int, ifMinusModifiedMinusSince: kotlin.String?) : kotlin.Array<MatchSimple> {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf("If-Modified-Since" to ifMinusModifiedMinusSince.toString())
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
-            "/team/{team_key}/matches/{year}/simple",
+            "/team/{team_key}/matches/{year}/simple".replace("{"+"team_key"+"}", "$teamKey").replace("{"+"year"+"}", "$year"),
             query = localVariableQuery,
             headers = localVariableHeaders
         )
