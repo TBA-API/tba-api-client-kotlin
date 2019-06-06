@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="getDistrictEvents"></a>
 # **getDistrictEvents**
-> kotlin.Array&lt;Event&gt; getDistrictEvents(districtKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;Event&gt; getDistrictEvents()
 
 
 
@@ -31,10 +31,8 @@ Gets a list of events in the given district.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = DistrictApi()
-val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Event> = apiInstance.getDistrictEvents(districtKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<Event> = apiInstance.getDistrictEvents()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DistrictApi#getDistrictEvents")
@@ -46,11 +44,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -67,7 +61,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictEventsKeys"></a>
 # **getDistrictEventsKeys**
-> kotlin.Array&lt;kotlin.String&gt; getDistrictEventsKeys(districtKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;kotlin.String&gt; getDistrictEventsKeys()
 
 
 
@@ -80,10 +74,8 @@ Gets a list of event keys for events in the given district.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = DistrictApi()
-val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getDistrictEventsKeys(districtKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getDistrictEventsKeys()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DistrictApi#getDistrictEventsKeys")
@@ -95,11 +87,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -116,7 +104,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictEventsSimple"></a>
 # **getDistrictEventsSimple**
-> kotlin.Array&lt;EventSimple&gt; getDistrictEventsSimple(districtKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;EventSimple&gt; getDistrictEventsSimple(districtKey)
 
 
 
@@ -130,9 +118,8 @@ Gets a short-form list of events in the given district.
 
 val apiInstance = DistrictApi()
 val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<EventSimple> = apiInstance.getDistrictEventsSimple(districtKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<EventSimple> = apiInstance.getDistrictEventsSimple(districtKey)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DistrictApi#getDistrictEventsSimple")
@@ -148,7 +135,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
@@ -165,7 +151,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictRankings"></a>
 # **getDistrictRankings**
-> kotlin.Array&lt;DistrictRanking&gt; getDistrictRankings(districtKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;DistrictRanking&gt; getDistrictRankings()
 
 
 
@@ -178,10 +164,8 @@ Gets a list of team district rankings for the given district.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = DistrictApi()
-val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<DistrictRanking> = apiInstance.getDistrictRankings(districtKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<DistrictRanking> = apiInstance.getDistrictRankings()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DistrictApi#getDistrictRankings")
@@ -193,11 +177,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -214,7 +194,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictTeams"></a>
 # **getDistrictTeams**
-> kotlin.Array&lt;Team&gt; getDistrictTeams(districtKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;Team&gt; getDistrictTeams()
 
 
 
@@ -227,10 +207,8 @@ Gets a list of &#x60;Team&#x60; objects that competed in events in the given dis
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = DistrictApi()
-val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Team> = apiInstance.getDistrictTeams(districtKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<Team> = apiInstance.getDistrictTeams()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DistrictApi#getDistrictTeams")
@@ -242,11 +220,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -263,7 +237,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictTeamsKeys"></a>
 # **getDistrictTeamsKeys**
-> kotlin.Array&lt;kotlin.String&gt; getDistrictTeamsKeys(districtKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;kotlin.String&gt; getDistrictTeamsKeys()
 
 
 
@@ -276,10 +250,8 @@ Gets a list of &#x60;Team&#x60; objects that competed in events in the given dis
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = DistrictApi()
-val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getDistrictTeamsKeys(districtKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getDistrictTeamsKeys()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DistrictApi#getDistrictTeamsKeys")
@@ -291,11 +263,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -312,7 +280,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictTeamsSimple"></a>
 # **getDistrictTeamsSimple**
-> kotlin.Array&lt;TeamSimple&gt; getDistrictTeamsSimple(districtKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;TeamSimple&gt; getDistrictTeamsSimple()
 
 
 
@@ -325,10 +293,8 @@ Gets a short-form list of &#x60;Team&#x60; objects that competed in events in th
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = DistrictApi()
-val districtKey : kotlin.String = districtKey_example // kotlin.String | TBA District Key, eg `2016fim`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<TeamSimple> = apiInstance.getDistrictTeamsSimple(districtKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<TeamSimple> = apiInstance.getDistrictTeamsSimple()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DistrictApi#getDistrictTeamsSimple")
@@ -340,11 +306,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **districtKey** | **kotlin.String**| TBA District Key, eg &#x60;2016fim&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -361,7 +323,7 @@ Name | Type | Description  | Notes
 
 <a name="getDistrictsByYear"></a>
 # **getDistrictsByYear**
-> kotlin.Array&lt;DistrictList&gt; getDistrictsByYear(year, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;DistrictList&gt; getDistrictsByYear()
 
 
 
@@ -374,10 +336,8 @@ Gets a list of districts and their corresponding district key, for the given yea
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = DistrictApi()
-val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<DistrictList> = apiInstance.getDistrictsByYear(year, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<DistrictList> = apiInstance.getDistrictsByYear()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DistrictApi#getDistrictsByYear")
@@ -389,11 +349,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -410,7 +366,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventDistrictPoints"></a>
 # **getEventDistrictPoints**
-> EventDistrictPoints getEventDistrictPoints(eventKey, ifMinusModifiedMinusSince)
+> EventDistrictPoints getEventDistrictPoints()
 
 
 
@@ -423,10 +379,8 @@ Gets a list of team rankings for the Event.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = DistrictApi()
-val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : EventDistrictPoints = apiInstance.getEventDistrictPoints(eventKey, ifMinusModifiedMinusSince)
+    val result : EventDistrictPoints = apiInstance.getEventDistrictPoints()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DistrictApi#getEventDistrictPoints")
@@ -438,11 +392,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -459,7 +409,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamDistricts"></a>
 # **getTeamDistricts**
-> kotlin.Array&lt;DistrictList&gt; getTeamDistricts(teamKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;DistrictList&gt; getTeamDistricts()
 
 
 
@@ -472,10 +422,8 @@ Gets an array of districts representing each year the team was in a district. Wi
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = DistrictApi()
-val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<DistrictList> = apiInstance.getTeamDistricts(teamKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<DistrictList> = apiInstance.getTeamDistricts()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DistrictApi#getTeamDistricts")
@@ -487,11 +435,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 

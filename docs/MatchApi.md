@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 <a name="getEventMatchTimeseries"></a>
 # **getEventMatchTimeseries**
-> kotlin.Array&lt;kotlin.String&gt; getEventMatchTimeseries(eventKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;kotlin.String&gt; getEventMatchTimeseries()
 
 
 
@@ -34,10 +34,8 @@ Gets an array of Match Keys for the given event key that have timeseries data. R
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getEventMatchTimeseries(eventKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getEventMatchTimeseries()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getEventMatchTimeseries")
@@ -49,11 +47,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -70,7 +64,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventMatches"></a>
 # **getEventMatches**
-> kotlin.Array&lt;Match&gt; getEventMatches(eventKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;Match&gt; getEventMatches()
 
 
 
@@ -83,10 +77,8 @@ Gets a list of matches for the given event.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Match> = apiInstance.getEventMatches(eventKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<Match> = apiInstance.getEventMatches()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getEventMatches")
@@ -98,11 +90,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -119,7 +107,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventMatchesKeys"></a>
 # **getEventMatchesKeys**
-> kotlin.Array&lt;kotlin.String&gt; getEventMatchesKeys(eventKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;kotlin.String&gt; getEventMatchesKeys()
 
 
 
@@ -132,10 +120,8 @@ Gets a list of match keys for the given event.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getEventMatchesKeys(eventKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getEventMatchesKeys()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getEventMatchesKeys")
@@ -147,11 +133,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -168,7 +150,7 @@ Name | Type | Description  | Notes
 
 <a name="getEventMatchesSimple"></a>
 # **getEventMatchesSimple**
-> kotlin.Array&lt;MatchSimple&gt; getEventMatchesSimple(eventKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;MatchSimple&gt; getEventMatchesSimple()
 
 
 
@@ -181,10 +163,8 @@ Gets a short-form list of matches for the given event.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<MatchSimple> = apiInstance.getEventMatchesSimple(eventKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<MatchSimple> = apiInstance.getEventMatchesSimple()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getEventMatchesSimple")
@@ -196,11 +176,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -217,7 +193,7 @@ Name | Type | Description  | Notes
 
 <a name="getMatch"></a>
 # **getMatch**
-> Match getMatch(matchKey, ifMinusModifiedMinusSince)
+> Match getMatch()
 
 
 
@@ -230,10 +206,8 @@ Gets a &#x60;Match&#x60; object for the given match key.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val matchKey : kotlin.String = matchKey_example // kotlin.String | TBA Match Key, eg `2016nytr_qm1`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : Match = apiInstance.getMatch(matchKey, ifMinusModifiedMinusSince)
+    val result : Match = apiInstance.getMatch()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getMatch")
@@ -245,11 +219,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **matchKey** | **kotlin.String**| TBA Match Key, eg &#x60;2016nytr_qm1&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -266,7 +236,7 @@ Name | Type | Description  | Notes
 
 <a name="getMatchSimple"></a>
 # **getMatchSimple**
-> MatchSimple getMatchSimple(matchKey, ifMinusModifiedMinusSince)
+> MatchSimple getMatchSimple()
 
 
 
@@ -279,10 +249,8 @@ Gets a short-form &#x60;Match&#x60; object for the given match key.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val matchKey : kotlin.String = matchKey_example // kotlin.String | TBA Match Key, eg `2016nytr_qm1`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : MatchSimple = apiInstance.getMatchSimple(matchKey, ifMinusModifiedMinusSince)
+    val result : MatchSimple = apiInstance.getMatchSimple()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getMatchSimple")
@@ -294,11 +262,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **matchKey** | **kotlin.String**| TBA Match Key, eg &#x60;2016nytr_qm1&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -315,7 +279,7 @@ Name | Type | Description  | Notes
 
 <a name="getMatchTimeseries"></a>
 # **getMatchTimeseries**
-> kotlin.Array&lt;kotlin.Any&gt; getMatchTimeseries(matchKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;kotlin.Any&gt; getMatchTimeseries()
 
 
 
@@ -328,10 +292,8 @@ Gets an array of game-specific Match Timeseries objects for the given match key 
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val matchKey : kotlin.String = matchKey_example // kotlin.String | TBA Match Key, eg `2016nytr_qm1`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.Any> = apiInstance.getMatchTimeseries(matchKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<kotlin.Any> = apiInstance.getMatchTimeseries()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getMatchTimeseries")
@@ -343,11 +305,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **matchKey** | **kotlin.String**| TBA Match Key, eg &#x60;2016nytr_qm1&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -364,7 +322,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventMatches"></a>
 # **getTeamEventMatches**
-> kotlin.Array&lt;Match&gt; getTeamEventMatches(teamKey, eventKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;Match&gt; getTeamEventMatches()
 
 
 
@@ -377,11 +335,8 @@ Gets a list of matches for the given team and event.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
-val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Match> = apiInstance.getTeamEventMatches(teamKey, eventKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<Match> = apiInstance.getTeamEventMatches()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getTeamEventMatches")
@@ -393,12 +348,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -415,7 +365,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventMatchesKeys"></a>
 # **getTeamEventMatchesKeys**
-> kotlin.Array&lt;kotlin.String&gt; getTeamEventMatchesKeys(teamKey, eventKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;kotlin.String&gt; getTeamEventMatchesKeys()
 
 
 
@@ -428,11 +378,8 @@ Gets a list of match keys for matches for the given team and event.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
-val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getTeamEventMatchesKeys(teamKey, eventKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getTeamEventMatchesKeys()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getTeamEventMatchesKeys")
@@ -444,12 +391,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -466,7 +408,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamEventMatchesSimple"></a>
 # **getTeamEventMatchesSimple**
-> kotlin.Array&lt;Match&gt; getTeamEventMatchesSimple(teamKey, eventKey, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;Match&gt; getTeamEventMatchesSimple()
 
 
 
@@ -479,11 +421,8 @@ Gets a short-form list of matches for the given team and event.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
-val eventKey : kotlin.String = eventKey_example // kotlin.String | TBA Event Key, eg `2016nytr`
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Match> = apiInstance.getTeamEventMatchesSimple(teamKey, eventKey, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<Match> = apiInstance.getTeamEventMatchesSimple()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getTeamEventMatchesSimple")
@@ -495,12 +434,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **eventKey** | **kotlin.String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -517,7 +451,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamMatchesByYear"></a>
 # **getTeamMatchesByYear**
-> kotlin.Array&lt;Match&gt; getTeamMatchesByYear(teamKey, year, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;Match&gt; getTeamMatchesByYear()
 
 
 
@@ -530,11 +464,8 @@ Gets a list of matches for the given team and year.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
-val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<Match> = apiInstance.getTeamMatchesByYear(teamKey, year, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<Match> = apiInstance.getTeamMatchesByYear()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getTeamMatchesByYear")
@@ -546,12 +477,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -568,7 +494,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamMatchesByYearKeys"></a>
 # **getTeamMatchesByYearKeys**
-> kotlin.Array&lt;kotlin.String&gt; getTeamMatchesByYearKeys(teamKey, year, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;kotlin.String&gt; getTeamMatchesByYearKeys()
 
 
 
@@ -581,11 +507,8 @@ Gets a list of match keys for matches for the given team and year.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
-val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<kotlin.String> = apiInstance.getTeamMatchesByYearKeys(teamKey, year, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<kotlin.String> = apiInstance.getTeamMatchesByYearKeys()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getTeamMatchesByYearKeys")
@@ -597,12 +520,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -619,7 +537,7 @@ Name | Type | Description  | Notes
 
 <a name="getTeamMatchesByYearSimple"></a>
 # **getTeamMatchesByYearSimple**
-> kotlin.Array&lt;MatchSimple&gt; getTeamMatchesByYearSimple(teamKey, year, ifMinusModifiedMinusSince)
+> kotlin.Array&lt;MatchSimple&gt; getTeamMatchesByYearSimple()
 
 
 
@@ -632,11 +550,8 @@ Gets a short-form list of matches for the given team and year.
 //import net.thefletcher.tbaapi.v3client.models.*
 
 val apiInstance = MatchApi()
-val teamKey : kotlin.String = teamKey_example // kotlin.String | TBA Team Key, eg `frc254`
-val year : kotlin.Int = 56 // kotlin.Int | Competition Year (or Season). Must be 4 digits.
-val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    val result : kotlin.Array<MatchSimple> = apiInstance.getTeamMatchesByYearSimple(teamKey, year, ifMinusModifiedMinusSince)
+    val result : kotlin.Array<MatchSimple> = apiInstance.getTeamMatchesByYearSimple()
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling MatchApi#getTeamMatchesByYearSimple")
@@ -648,12 +563,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **teamKey** | **kotlin.String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **year** | **kotlin.Int**| Competition Year (or Season). Must be 4 digits. |
- **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
