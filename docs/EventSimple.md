@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **city** | **kotlin.String** | City, town, village, etc. the event is located in. |  [optional]
 **stateProv** | **kotlin.String** | State or Province the event is located in. |  [optional]
 **country** | **kotlin.String** | Country the event is located in. |  [optional]
-**startDate** | [**java.time.LocalDateTime**](java.time.LocalDateTime.md) | Event start date in &#x60;yyyy-mm-dd&#x60; format. | 
-**endDate** | [**java.time.LocalDateTime**](java.time.LocalDateTime.md) | Event end date in &#x60;yyyy-mm-dd&#x60; format. | 
+**startDate** | [**java.time.LocalDate**](java.time.LocalDate.md) | Event start date in &#x60;yyyy-mm-dd&#x60; format. | 
+**endDate** | [**java.time.LocalDate**](java.time.LocalDate.md) | Event end date in &#x60;yyyy-mm-dd&#x60; format. | 
 **year** | **kotlin.Int** | Year the event data is for. | 
 
 

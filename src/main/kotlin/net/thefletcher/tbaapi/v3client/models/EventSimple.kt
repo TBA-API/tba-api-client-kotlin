@@ -43,10 +43,10 @@ data class EventSimple (
     val eventType: kotlin.Int,
     /* Event start date in `yyyy-mm-dd` format. */
     @Json(name = "start_date")
-    val startDate: java.time.LocalDateTime,
+    val startDate: java.time.LocalDate,
     /* Event end date in `yyyy-mm-dd` format. */
     @Json(name = "end_date")
-    val endDate: java.time.LocalDateTime,
+    val endDate: java.time.LocalDate,
     /* Year the event data is for. */
     @Json(name = "year")
     val year: kotlin.Int,
