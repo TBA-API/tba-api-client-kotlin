@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Enum: type
 Name | Value
 ---- | -----
-type | youtube, twitch, ustream, iframe, html5, rtmp, livestream
+type | youtube, twitch, ustream, iframe, html5, rtmp, livestream, direct_link
 
 
 

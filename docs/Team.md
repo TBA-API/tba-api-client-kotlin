@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **lng** | **kotlin.Double** | Will be NULL, for future development. |  [optional]
 **locationName** | **kotlin.String** | Will be NULL, for future development. |  [optional]
 **website** | **kotlin.String** | Official website associated with the team. |  [optional]
-**rookieYear** | **kotlin.Int** | First year the team officially competed. | 
+**rookieYear** | **kotlin.Int** | First year the team officially competed. |  [optional]
 **motto** | **kotlin.String** | Team&#39;s motto as provided by FIRST. This field is deprecated and will return null - will be removed at end-of-season in 2019. |  [optional]
 **homeChampionship** | [**kotlin.Any**](.md) | Location of the team&#39;s home championship each year as a key-value pair. The year (as a string) is the key, and the city is the value. |  [optional]
 

@@ -44,9 +44,6 @@ data class Team (
     /* Official long name registered with FIRST. */
     @Json(name = "name")
     val name: kotlin.String,
-    /* First year the team officially competed. */
-    @Json(name = "rookie_year")
-    val rookieYear: kotlin.Int,
     /* Team nickname provided by FIRST. */
     @Json(name = "nickname")
     val nickname: kotlin.String? = null,
@@ -83,6 +80,9 @@ data class Team (
     /* Official website associated with the team. */
     @Json(name = "website")
     val website: kotlin.String? = null,
+    /* First year the team officially competed. */
+    @Json(name = "rookie_year")
+    val rookieYear: kotlin.Int? = null,
     /* Team's motto as provided by FIRST. This field is deprecated and will return null - will be removed at end-of-season in 2019. */
     @Json(name = "motto")
     val motto: kotlin.String? = null,
