@@ -33,7 +33,7 @@ data class Webcast (
 
     /**
     * Type of webcast, typically descriptive of the streaming provider.
-    * Values: youtube,twitch,ustream,iframe,html5,rtmp,livestream,directLink
+    * Values: youtube,twitch,ustream,iframe,html5,rtmp,livestream,directLink,mms,justin,stemtv,dacast
     */
     enum class Type(val value: kotlin.String){
     
@@ -59,7 +59,19 @@ data class Webcast (
         livestream("livestream"),
     
         @Json(name = "direct_link")
-        directLink("direct_link");
+        directLink("direct_link"),
+    
+        @Json(name = "mms")
+        mms("mms"),
+    
+        @Json(name = "justin")
+        justin("justin"),
+    
+        @Json(name = "stemtv")
+        stemtv("stemtv"),
+    
+        @Json(name = "dacast")
+        dacast("dacast");
     
     }
 
