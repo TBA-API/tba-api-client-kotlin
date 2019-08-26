@@ -58,7 +58,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+
+Configure apiKey:
+    ApiClient.apiKey["X-TBA-Auth-Key"] = ""
+    ApiClient.apiKeyPrefix["X-TBA-Auth-Key"] = ""
 
 ### HTTP request headers
 
@@ -107,7 +110,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+
+Configure apiKey:
+    ApiClient.apiKey["X-TBA-Auth-Key"] = ""
+    ApiClient.apiKeyPrefix["X-TBA-Auth-Key"] = ""
 
 ### HTTP request headers
 
@@ -156,7 +162,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+
+Configure apiKey:
+    ApiClient.apiKey["X-TBA-Auth-Key"] = ""
+    ApiClient.apiKeyPrefix["X-TBA-Auth-Key"] = ""
 
 ### HTTP request headers
 
@@ -205,7 +214,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+
+Configure apiKey:
+    ApiClient.apiKey["X-TBA-Auth-Key"] = ""
+    ApiClient.apiKeyPrefix["X-TBA-Auth-Key"] = ""
 
 ### HTTP request headers
 
@@ -254,7 +266,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+
+Configure apiKey:
+    ApiClient.apiKey["X-TBA-Auth-Key"] = ""
+    ApiClient.apiKeyPrefix["X-TBA-Auth-Key"] = ""
 
 ### HTTP request headers
 
@@ -303,7 +318,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+
+Configure apiKey:
+    ApiClient.apiKey["X-TBA-Auth-Key"] = ""
+    ApiClient.apiKeyPrefix["X-TBA-Auth-Key"] = ""
 
 ### HTTP request headers
 
@@ -352,7 +370,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+
+Configure apiKey:
+    ApiClient.apiKey["X-TBA-Auth-Key"] = ""
+    ApiClient.apiKeyPrefix["X-TBA-Auth-Key"] = ""
 
 ### HTTP request headers
 
@@ -401,7 +422,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+
+Configure apiKey:
+    ApiClient.apiKey["X-TBA-Auth-Key"] = ""
+    ApiClient.apiKeyPrefix["X-TBA-Auth-Key"] = ""
 
 ### HTTP request headers
 
@@ -450,7 +474,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+
+Configure apiKey:
+    ApiClient.apiKey["X-TBA-Auth-Key"] = ""
+    ApiClient.apiKeyPrefix["X-TBA-Auth-Key"] = ""
 
 ### HTTP request headers
 
@@ -499,7 +526,10 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+
+Configure apiKey:
+    ApiClient.apiKey["X-TBA-Auth-Key"] = ""
+    ApiClient.apiKeyPrefix["X-TBA-Auth-Key"] = ""
 
 ### HTTP request headers
 

@@ -63,8 +63,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<DistrictRanking>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -95,8 +95,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Team>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -127,8 +127,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<kotlin.String>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -159,8 +159,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<TeamSimple>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -191,8 +191,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Team>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -223,8 +223,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<kotlin.String>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -255,8 +255,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<TeamSimple>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -287,8 +287,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.collections.Map<kotlin.String, TeamEventStatus>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -319,8 +319,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as Team
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -351,8 +351,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Award>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -384,8 +384,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Award>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -416,8 +416,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<DistrictList>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -449,8 +449,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Award>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -482,8 +482,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Match>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -515,8 +515,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<kotlin.String>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -548,8 +548,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Match>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -581,8 +581,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as TeamEventStatus
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -613,8 +613,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Event>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -646,8 +646,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Event>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -679,8 +679,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<kotlin.String>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -712,8 +712,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<EventSimple>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -744,8 +744,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<kotlin.String>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -776,8 +776,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<EventSimple>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -809,8 +809,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.collections.Map<kotlin.String, TeamEventStatus>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -842,8 +842,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Match>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -875,8 +875,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<kotlin.String>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -908,8 +908,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<MatchSimple>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -941,8 +941,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Media>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -975,8 +975,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Media>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -1008,8 +1008,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Media>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -1040,8 +1040,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<TeamRobot>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -1072,8 +1072,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as TeamSimple
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -1104,8 +1104,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Media>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -1136,8 +1136,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<kotlin.Int>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -1168,8 +1168,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Team>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -1201,8 +1201,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<Team>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -1234,8 +1234,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<kotlin.String>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -1267,8 +1267,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<TeamSimple>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -1299,8 +1299,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<kotlin.String>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
@@ -1331,8 +1331,8 @@ class TeamApi(basePath: kotlin.String = "https://www.thebluealliance.com/api/v3"
 
         return when (response.responseType) {
             ResponseType.Success -> (response as Success<*>).data as kotlin.Array<TeamSimple>
-            ResponseType.Informational -> TODO()
-            ResponseType.Redirection -> TODO()
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> throw ClientException((response as ClientError<*>).body as? String ?: "Client error")
             ResponseType.ServerError -> throw ServerException((response as ServerError<*>).message ?: "Server error")
         }
