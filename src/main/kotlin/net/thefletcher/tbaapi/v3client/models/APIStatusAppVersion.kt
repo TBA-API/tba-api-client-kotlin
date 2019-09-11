@@ -25,7 +25,6 @@ data class APIStatusAppVersion (
     /* Internal use - Latest application version available. */
     @Json(name = "latest_app_version")
     val latestAppVersion: kotlin.Int
-) {
+)
 
-}
 

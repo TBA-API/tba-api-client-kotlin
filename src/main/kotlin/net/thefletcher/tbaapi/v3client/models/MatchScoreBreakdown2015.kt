@@ -30,24 +30,22 @@ data class MatchScoreBreakdown2015 (
     val coopertition: MatchScoreBreakdown2015.Coopertition? = null,
     @Json(name = "coopertition_points")
     val coopertitionPoints: kotlin.Int? = null
-) {
+)
 
+{
     /**
     * 
     * Values: none,unknown,stack
     */
     enum class Coopertition(val value: kotlin.String){
     
-        @Json(name = "None")
-        none("None"),
+        @Json(name = "None") none("None"),
     
-        @Json(name = "Unknown")
-        unknown("Unknown"),
+        @Json(name = "Unknown") unknown("Unknown"),
     
-        @Json(name = "Stack")
-        stack("Stack");
+        @Json(name = "Stack") stack("Stack");
     
     }
-
 }
+
 

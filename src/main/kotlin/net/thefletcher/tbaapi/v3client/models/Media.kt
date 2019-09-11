@@ -45,54 +45,42 @@ data class Media (
     /* The URL that leads to the full web page for the media, if one exists. */
     @Json(name = "view_url")
     val viewUrl: kotlin.String? = null
-) {
+)
 
+{
     /**
     * String type of the media element.
     * Values: youtube,cdphotothread,imgur,facebookMinusProfile,youtubeMinusChannel,twitterMinusProfile,githubMinusProfile,instagramMinusProfile,periscopeMinusProfile,grabcad,instagramMinusImage,externalMinusLink,avatar
     */
     enum class Type(val value: kotlin.String){
     
-        @Json(name = "youtube")
-        youtube("youtube"),
+        @Json(name = "youtube") youtube("youtube"),
     
-        @Json(name = "cdphotothread")
-        cdphotothread("cdphotothread"),
+        @Json(name = "cdphotothread") cdphotothread("cdphotothread"),
     
-        @Json(name = "imgur")
-        imgur("imgur"),
+        @Json(name = "imgur") imgur("imgur"),
     
-        @Json(name = "facebook-profile")
-        facebookMinusProfile("facebook-profile"),
+        @Json(name = "facebook-profile") facebookMinusProfile("facebook-profile"),
     
-        @Json(name = "youtube-channel")
-        youtubeMinusChannel("youtube-channel"),
+        @Json(name = "youtube-channel") youtubeMinusChannel("youtube-channel"),
     
-        @Json(name = "twitter-profile")
-        twitterMinusProfile("twitter-profile"),
+        @Json(name = "twitter-profile") twitterMinusProfile("twitter-profile"),
     
-        @Json(name = "github-profile")
-        githubMinusProfile("github-profile"),
+        @Json(name = "github-profile") githubMinusProfile("github-profile"),
     
-        @Json(name = "instagram-profile")
-        instagramMinusProfile("instagram-profile"),
+        @Json(name = "instagram-profile") instagramMinusProfile("instagram-profile"),
     
-        @Json(name = "periscope-profile")
-        periscopeMinusProfile("periscope-profile"),
+        @Json(name = "periscope-profile") periscopeMinusProfile("periscope-profile"),
     
-        @Json(name = "grabcad")
-        grabcad("grabcad"),
+        @Json(name = "grabcad") grabcad("grabcad"),
     
-        @Json(name = "instagram-image")
-        instagramMinusImage("instagram-image"),
+        @Json(name = "instagram-image") instagramMinusImage("instagram-image"),
     
-        @Json(name = "external-link")
-        externalMinusLink("external-link"),
+        @Json(name = "external-link") externalMinusLink("external-link"),
     
-        @Json(name = "avatar")
-        avatar("avatar");
+        @Json(name = "avatar") avatar("avatar");
     
     }
-
 }
+
 

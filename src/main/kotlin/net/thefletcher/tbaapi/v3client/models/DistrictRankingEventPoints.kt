@@ -45,7 +45,6 @@ data class DistrictRankingEventPoints (
     /* Points awarded for qualification match performance. */
     @Json(name = "qual_points")
     val qualPoints: kotlin.Int
-) {
+)
 
-}
 

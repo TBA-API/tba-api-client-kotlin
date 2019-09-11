@@ -113,7 +113,6 @@ data class EventInsights2016 (
     /* An array with three values, high score, match key from the match with the high score, and the name of the match. */
     @Json(name = "high_score")
     val highScore: kotlin.Array<kotlin.String>
-) {
+)
 
-}
 

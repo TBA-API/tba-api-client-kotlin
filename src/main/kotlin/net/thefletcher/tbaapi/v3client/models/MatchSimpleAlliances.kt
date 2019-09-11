@@ -24,7 +24,6 @@ data class MatchSimpleAlliances (
     val red: MatchAlliance? = null,
     @Json(name = "blue")
     val blue: MatchAlliance? = null
-) {
+)
 
-}
 

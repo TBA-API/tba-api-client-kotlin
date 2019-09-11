@@ -40,7 +40,6 @@ data class APIStatus (
     val ios: APIStatusAppVersion,
     @Json(name = "android")
     val android: APIStatusAppVersion
-) {
+)
 
-}
 

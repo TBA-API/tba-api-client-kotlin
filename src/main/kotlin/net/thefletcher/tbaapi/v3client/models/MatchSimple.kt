@@ -57,44 +57,40 @@ data class MatchSimple (
     /* UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time. */
     @Json(name = "actual_time")
     val actualTime: kotlin.Long? = null
-) {
+)
 
+{
     /**
     * The competition level the match was played at.
     * Values: qm,ef,qf,sf,f
     */
     enum class CompLevel(val value: kotlin.String){
     
-        @Json(name = "qm")
-        qm("qm"),
+        @Json(name = "qm") qm("qm"),
     
-        @Json(name = "ef")
-        ef("ef"),
+        @Json(name = "ef") ef("ef"),
     
-        @Json(name = "qf")
-        qf("qf"),
+        @Json(name = "qf") qf("qf"),
     
-        @Json(name = "sf")
-        sf("sf"),
+        @Json(name = "sf") sf("sf"),
     
-        @Json(name = "f")
-        f("f");
+        @Json(name = "f") f("f");
     
     }
+}
 
+{
     /**
     * The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.
     * Values: red,blue
     */
     enum class WinningAlliance(val value: kotlin.String){
     
-        @Json(name = "red")
-        red("red"),
+        @Json(name = "red") red("red"),
     
-        @Json(name = "blue")
-        blue("blue");
+        @Json(name = "blue") blue("blue");
     
     }
-
 }
+
 

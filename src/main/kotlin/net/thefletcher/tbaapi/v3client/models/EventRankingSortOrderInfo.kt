@@ -25,7 +25,6 @@ data class EventRankingSortOrderInfo (
     /* Name of the field used in the `sort_order` array. */
     @Json(name = "name")
     val name: kotlin.String
-) {
+)
 
-}
 

@@ -45,7 +45,6 @@ data class TeamSimple (
     /* Country of team derived from parsing the address registered with FIRST. */
     @Json(name = "country")
     val country: kotlin.String? = null
-) {
+)
 
-}
 

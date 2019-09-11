@@ -36,47 +36,42 @@ data class TeamEventStatusPlayoff (
     /* The average match score during playoffs. Year specific. May be null if not relevant for a given year. */
     @Json(name = "playoff_average")
     val playoffAverage: kotlin.Int? = null
-) {
+)
 
+{
     /**
     * The highest playoff level the team reached.
     * Values: qm,ef,qf,sf,f
     */
     enum class Level(val value: kotlin.String){
     
-        @Json(name = "qm")
-        qm("qm"),
+        @Json(name = "qm") qm("qm"),
     
-        @Json(name = "ef")
-        ef("ef"),
+        @Json(name = "ef") ef("ef"),
     
-        @Json(name = "qf")
-        qf("qf"),
+        @Json(name = "qf") qf("qf"),
     
-        @Json(name = "sf")
-        sf("sf"),
+        @Json(name = "sf") sf("sf"),
     
-        @Json(name = "f")
-        f("f");
+        @Json(name = "f") f("f");
     
     }
+}
 
+{
     /**
     * Current competition status for the playoffs.
     * Values: won,eliminated,playing
     */
     enum class Status(val value: kotlin.String){
     
-        @Json(name = "won")
-        won("won"),
+        @Json(name = "won") won("won"),
     
-        @Json(name = "eliminated")
-        eliminated("eliminated"),
+        @Json(name = "eliminated") eliminated("eliminated"),
     
-        @Json(name = "playing")
-        playing("playing");
+        @Json(name = "playing") playing("playing");
     
     }
-
 }
+
 

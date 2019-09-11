@@ -89,7 +89,6 @@ data class Team (
     /* Location of the team's home championship each year as a key-value pair. The year (as a string) is the key, and the city is the value. */
     @Json(name = "home_championship")
     val homeChampionship: kotlin.Any? = null
-) {
+)
 
-}
 

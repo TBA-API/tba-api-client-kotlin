@@ -116,58 +116,54 @@ data class MatchScoreBreakdown2017Alliance (
     val touchpadMiddle: kotlin.String? = null,
     @Json(name = "touchpadFar")
     val touchpadFar: kotlin.String? = null
-) {
+)
 
+{
     /**
     * 
     * Values: unknown,mobility,none
     */
     enum class Robot1Auto(val value: kotlin.String){
     
-        @Json(name = "Unknown")
-        unknown("Unknown"),
+        @Json(name = "Unknown") unknown("Unknown"),
     
-        @Json(name = "Mobility")
-        mobility("Mobility"),
+        @Json(name = "Mobility") mobility("Mobility"),
     
-        @Json(name = "None")
-        none("None");
+        @Json(name = "None") none("None");
     
     }
+}
 
+{
     /**
     * 
     * Values: unknown,mobility,none
     */
     enum class Robot2Auto(val value: kotlin.String){
     
-        @Json(name = "Unknown")
-        unknown("Unknown"),
+        @Json(name = "Unknown") unknown("Unknown"),
     
-        @Json(name = "Mobility")
-        mobility("Mobility"),
+        @Json(name = "Mobility") mobility("Mobility"),
     
-        @Json(name = "None")
-        none("None");
+        @Json(name = "None") none("None");
     
     }
+}
 
+{
     /**
     * 
     * Values: unknown,mobility,none
     */
     enum class Robot3Auto(val value: kotlin.String){
     
-        @Json(name = "Unknown")
-        unknown("Unknown"),
+        @Json(name = "Unknown") unknown("Unknown"),
     
-        @Json(name = "Mobility")
-        mobility("Mobility"),
+        @Json(name = "Mobility") mobility("Mobility"),
     
-        @Json(name = "None")
-        none("None");
+        @Json(name = "None") none("None");
     
     }
-
 }
+
 

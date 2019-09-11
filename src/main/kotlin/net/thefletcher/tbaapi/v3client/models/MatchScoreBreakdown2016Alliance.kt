@@ -131,58 +131,54 @@ data class MatchScoreBreakdown2016Alliance (
     val position4crossings: kotlin.Int? = null,
     @Json(name = "position5crossings")
     val position5crossings: kotlin.Int? = null
-) {
+)
 
+{
     /**
     * 
     * Values: crossed,reached,none
     */
     enum class Robot1Auto(val value: kotlin.String){
     
-        @Json(name = "Crossed")
-        crossed("Crossed"),
+        @Json(name = "Crossed") crossed("Crossed"),
     
-        @Json(name = "Reached")
-        reached("Reached"),
+        @Json(name = "Reached") reached("Reached"),
     
-        @Json(name = "None")
-        none("None");
+        @Json(name = "None") none("None");
     
     }
+}
 
+{
     /**
     * 
     * Values: crossed,reached,none
     */
     enum class Robot2Auto(val value: kotlin.String){
     
-        @Json(name = "Crossed")
-        crossed("Crossed"),
+        @Json(name = "Crossed") crossed("Crossed"),
     
-        @Json(name = "Reached")
-        reached("Reached"),
+        @Json(name = "Reached") reached("Reached"),
     
-        @Json(name = "None")
-        none("None");
+        @Json(name = "None") none("None");
     
     }
+}
 
+{
     /**
     * 
     * Values: crossed,reached,none
     */
     enum class Robot3Auto(val value: kotlin.String){
     
-        @Json(name = "Crossed")
-        crossed("Crossed"),
+        @Json(name = "Crossed") crossed("Crossed"),
     
-        @Json(name = "Reached")
-        reached("Reached"),
+        @Json(name = "Reached") reached("Reached"),
     
-        @Json(name = "None")
-        none("None");
+        @Json(name = "None") none("None");
     
     }
-
 }
+
 

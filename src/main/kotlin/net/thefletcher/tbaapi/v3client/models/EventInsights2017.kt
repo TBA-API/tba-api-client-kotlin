@@ -145,7 +145,6 @@ data class EventInsights2017 (
     /* An array with three values, number of times a unicorn match (Win + kPa & Rotor Bonuses) occured, number of opportunities to have a unicorn match, and percentage. */
     @Json(name = "unicorn_matches")
     val unicornMatches: kotlin.Array<kotlin.Float>
-) {
+)
 
-}
 

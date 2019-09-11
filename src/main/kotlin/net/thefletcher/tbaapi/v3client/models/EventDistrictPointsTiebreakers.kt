@@ -23,7 +23,6 @@ data class EventDistrictPointsTiebreakers (
     val highestQualScores: kotlin.Array<kotlin.Int>? = null,
     @Json(name = "qual_wins")
     val qualWins: kotlin.Int? = null
-) {
+)
 
-}
 

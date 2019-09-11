@@ -32,7 +32,6 @@ data class EventRanking (
     /* List of special TBA-generated values provided in the `extra_stats` array for each item. */
     @Json(name = "extra_stats_info")
     val extraStatsInfo: kotlin.Array<EventRankingExtraStatsInfo>? = null
-) {
+)
 
-}
 

@@ -33,7 +33,6 @@ data class TeamEventStatusRank (
     val sortOrderInfo: kotlin.Array<TeamEventStatusRankSortOrderInfo>? = null,
     @Json(name = "status")
     val status: kotlin.String? = null
-) {
+)
 
-}
 

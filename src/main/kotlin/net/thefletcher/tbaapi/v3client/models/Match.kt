@@ -70,30 +70,26 @@ data class Match (
     /* Array of video objects associated with this match. */
     @Json(name = "videos")
     val videos: kotlin.Array<MatchVideos>? = null
-) {
+)
 
+{
     /**
     * The competition level the match was played at.
     * Values: qm,ef,qf,sf,f
     */
     enum class CompLevel(val value: kotlin.String){
     
-        @Json(name = "qm")
-        qm("qm"),
+        @Json(name = "qm") qm("qm"),
     
-        @Json(name = "ef")
-        ef("ef"),
+        @Json(name = "ef") ef("ef"),
     
-        @Json(name = "qf")
-        qf("qf"),
+        @Json(name = "qf") qf("qf"),
     
-        @Json(name = "sf")
-        sf("sf"),
+        @Json(name = "sf") sf("sf"),
     
-        @Json(name = "f")
-        f("f");
+        @Json(name = "f") f("f");
     
     }
-
 }
+
 

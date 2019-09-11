@@ -25,7 +25,6 @@ data class EliminationAllianceBackup (
     /* Team key that was replaced by the backup team. */
     @Json(name = "out")
     val `out`: kotlin.String? = null
-) {
+)
 
-}
 

@@ -137,7 +137,6 @@ data class Event (
     /* String representation of the `playoff_type`, or null. */
     @Json(name = "playoff_type_string")
     val playoffTypeString: kotlin.String? = null
-) {
+)
 
-}
 
