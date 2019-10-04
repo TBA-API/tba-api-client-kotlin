@@ -24,6 +24,7 @@ import com.squareup.moshi.Json
  * @param dq Number of matches the team was disqualified for.
  * @param teamKey TBA team key for this rank.
  */
+
 data class TeamEventStatusRankRanking (
     /* Number of matches played. */
     @Json(name = "matches_played")
@@ -45,6 +46,7 @@ data class TeamEventStatusRankRanking (
     /* TBA team key for this rank. */
     @Json(name = "team_key")
     val teamKey: kotlin.String? = null
-)
+) 
+
 
 

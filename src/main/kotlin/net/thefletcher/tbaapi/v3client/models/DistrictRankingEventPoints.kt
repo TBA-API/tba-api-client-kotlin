@@ -23,6 +23,7 @@ import com.squareup.moshi.Json
  * @param eventKey TBA Event key for this event.
  * @param qualPoints Points awarded for qualification match performance.
  */
+
 data class DistrictRankingEventPoints (
     /* `true` if this event is a District Championship event. */
     @Json(name = "district_cmp")
@@ -45,6 +46,7 @@ data class DistrictRankingEventPoints (
     /* Points awarded for qualification match performance. */
     @Json(name = "qual_points")
     val qualPoints: kotlin.Int
-)
+) 
+
 
 

@@ -53,6 +53,7 @@ import com.squareup.moshi.Json
  * @param winningScaleOwnershipPercentageAuto Average scale ownership percentage for the winning alliance during auto.
  * @param winningScaleOwnershipPercentageTeleop Average scale ownership percentage for the winning alliance during teleop.
  */
+
 data class EventInsights2018 (
     /* An array with three values, number of times auto quest was completed, number of opportunities to complete the auto quest, and percentage. */
     @Json(name = "auto_quest_achieved")
@@ -165,6 +166,7 @@ data class EventInsights2018 (
     /* Average scale ownership percentage for the winning alliance during teleop. */
     @Json(name = "winning_scale_ownership_percentage_teleop")
     val winningScaleOwnershipPercentageTeleop: kotlin.Float
-)
+) 
+
 
 

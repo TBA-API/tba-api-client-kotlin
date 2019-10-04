@@ -18,6 +18,7 @@ import com.squareup.moshi.Json
  * @param precision Integer expressing the number of digits of precision in the number provided in `sort_orders`.
  * @param name Name of the field used in the `extra_stats` array.
  */
+
 data class EventRankingExtraStatsInfo (
     /* Integer expressing the number of digits of precision in the number provided in `sort_orders`. */
     @Json(name = "precision")
@@ -25,6 +26,7 @@ data class EventRankingExtraStatsInfo (
     /* Name of the field used in the `extra_stats` array. */
     @Json(name = "name")
     val name: kotlin.String
-)
+) 
+
 
 

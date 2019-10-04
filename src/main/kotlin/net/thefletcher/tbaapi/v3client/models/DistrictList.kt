@@ -20,6 +20,7 @@ import com.squareup.moshi.Json
  * @param key Key for this district, e.g. `2016ne`.
  * @param year Year this district participated.
  */
+
 data class DistrictList (
     /* The short identifier for the district. */
     @Json(name = "abbreviation")
@@ -33,6 +34,7 @@ data class DistrictList (
     /* Year this district participated. */
     @Json(name = "year")
     val year: kotlin.Int
-)
+) 
+
 
 

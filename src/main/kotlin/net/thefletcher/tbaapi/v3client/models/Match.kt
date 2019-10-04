@@ -31,6 +31,7 @@ import com.squareup.moshi.Json
  * @param scoreBreakdown Score breakdown for auto, teleop, etc. points. Varies from year to year. May be null.
  * @param videos Array of video objects associated with this match.
  */
+
 data class Match (
     /* TBA match key with the format `yyyy[EVENT_CODE]_[COMP_LEVEL]m[MATCH_NUMBER]`, where `yyyy` is the year, and `EVENT_CODE` is the event code of the event, `COMP_LEVEL` is (qm, ef, qf, sf, f), and `MATCH_NUMBER` is the match number in the competition level. A set number may be appended to the competition level if more than one match in required per set. */
     @Json(name = "key")
@@ -70,13 +71,16 @@ data class Match (
     /* Array of video objects associated with this match. */
     @Json(name = "videos")
     val videos: kotlin.Array<MatchVideos>? = null
-)
+) 
+
 
 {
+
     /**
     * The competition level the match was played at.
     * Values: qm,ef,qf,sf,f
     */
+    
     enum class CompLevel(val value: kotlin.String){
     
         @Json(name = "qm") qm("qm"),
@@ -89,7 +93,8 @@ data class Match (
     
         @Json(name = "f") f("f");
     
-    }
-}
 
+    }
+
+}
 

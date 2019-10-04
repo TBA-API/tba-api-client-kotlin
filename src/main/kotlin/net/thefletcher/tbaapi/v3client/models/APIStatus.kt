@@ -23,6 +23,7 @@ import com.squareup.moshi.Json
  * @param ios 
  * @param android 
  */
+
 data class APIStatus (
     /* Year of the current FRC season. */
     @Json(name = "current_season")
@@ -40,6 +41,7 @@ data class APIStatus (
     val ios: APIStatusAppVersion,
     @Json(name = "android")
     val android: APIStatusAppVersion
-)
+) 
+
 
 

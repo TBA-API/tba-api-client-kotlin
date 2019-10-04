@@ -27,6 +27,7 @@ import com.squareup.moshi.Json
  * @param predictedTime UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the TBA predicted match start time.
  * @param actualTime UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time.
  */
+
 data class MatchSimple (
     /* TBA match key with the format `yyyy[EVENT_CODE]_[COMP_LEVEL]m[MATCH_NUMBER]`, where `yyyy` is the year, and `EVENT_CODE` is the event code of the event, `COMP_LEVEL` is (qm, ef, qf, sf, f), and `MATCH_NUMBER` is the match number in the competition level. A set number may append the competition level if more than one match in required per set. */
     @Json(name = "key")
@@ -57,13 +58,16 @@ data class MatchSimple (
     /* UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time. */
     @Json(name = "actual_time")
     val actualTime: kotlin.Long? = null
-)
+) 
+
 
 {
+
     /**
     * The competition level the match was played at.
     * Values: qm,ef,qf,sf,f
     */
+    
     enum class CompLevel(val value: kotlin.String){
     
         @Json(name = "qm") qm("qm"),
@@ -76,21 +80,22 @@ data class MatchSimple (
     
         @Json(name = "f") f("f");
     
-    }
-}
 
-{
+    }
+
     /**
     * The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.
     * Values: red,blue
     */
+    
     enum class WinningAlliance(val value: kotlin.String){
     
         @Json(name = "red") red("red"),
     
         @Json(name = "blue") blue("blue");
     
-    }
-}
 
+    }
+
+}
 

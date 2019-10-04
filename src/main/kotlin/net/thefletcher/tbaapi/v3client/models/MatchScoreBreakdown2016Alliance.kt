@@ -54,6 +54,7 @@ import com.squareup.moshi.Json
  * @param position4crossings 
  * @param position5crossings 
  */
+
 data class MatchScoreBreakdown2016Alliance (
     @Json(name = "autoPoints")
     val autoPoints: kotlin.Int? = null,
@@ -131,13 +132,16 @@ data class MatchScoreBreakdown2016Alliance (
     val position4crossings: kotlin.Int? = null,
     @Json(name = "position5crossings")
     val position5crossings: kotlin.Int? = null
-)
+) 
+
 
 {
+
     /**
     * 
     * Values: crossed,reached,none
     */
+    
     enum class Robot1Auto(val value: kotlin.String){
     
         @Json(name = "Crossed") crossed("Crossed"),
@@ -146,14 +150,14 @@ data class MatchScoreBreakdown2016Alliance (
     
         @Json(name = "None") none("None");
     
-    }
-}
 
-{
+    }
+
     /**
     * 
     * Values: crossed,reached,none
     */
+    
     enum class Robot2Auto(val value: kotlin.String){
     
         @Json(name = "Crossed") crossed("Crossed"),
@@ -162,14 +166,14 @@ data class MatchScoreBreakdown2016Alliance (
     
         @Json(name = "None") none("None");
     
-    }
-}
 
-{
+    }
+
     /**
     * 
     * Values: crossed,reached,none
     */
+    
     enum class Robot3Auto(val value: kotlin.String){
     
         @Json(name = "Crossed") crossed("Crossed"),
@@ -178,7 +182,8 @@ data class MatchScoreBreakdown2016Alliance (
     
         @Json(name = "None") none("None");
     
-    }
-}
 
+    }
+
+}
 

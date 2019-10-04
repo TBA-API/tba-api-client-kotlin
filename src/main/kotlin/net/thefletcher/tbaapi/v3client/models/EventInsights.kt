@@ -18,6 +18,7 @@ import com.squareup.moshi.Json
  * @param qual Inights for the qualification round of an event
  * @param playoff Insights for the playoff round of an event
  */
+
 data class EventInsights (
     /* Inights for the qualification round of an event */
     @Json(name = "qual")
@@ -25,6 +26,7 @@ data class EventInsights (
     /* Insights for the playoff round of an event */
     @Json(name = "playoff")
     val playoff: kotlin.Any? = null
-)
+) 
+
 
 

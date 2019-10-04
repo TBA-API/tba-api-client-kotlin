@@ -67,6 +67,7 @@ import com.squareup.moshi.Json
  * @param topRightRocketNear 
  * @param totalPoints 
  */
+
 data class MatchScoreBreakdown2019Alliance (
     @Json(name = "adjustPoints")
     val adjustPoints: kotlin.Int? = null,
@@ -170,6 +171,7 @@ data class MatchScoreBreakdown2019Alliance (
     val topRightRocketNear: kotlin.String? = null,
     @Json(name = "totalPoints")
     val totalPoints: kotlin.Int? = null
-)
+) 
+
 
 

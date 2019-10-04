@@ -22,6 +22,7 @@ import com.squareup.moshi.Json
  * @param extraStatsInfo List of special TBA-generated values provided in the `extra_stats` array for each item.
  * @param sortOrderInfo List of year-specific values provided in the `sort_orders` array for each team.
  */
+
 data class EventRanking (
     /* List of rankings at the event. */
     @Json(name = "rankings")
@@ -32,6 +33,7 @@ data class EventRanking (
     /* List of special TBA-generated values provided in the `extra_stats` array for each item. */
     @Json(name = "extra_stats_info")
     val extraStatsInfo: kotlin.Array<EventRankingExtraStatsInfo>? = null
-)
+) 
+
 
 

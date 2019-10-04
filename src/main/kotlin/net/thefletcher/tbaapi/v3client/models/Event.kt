@@ -48,6 +48,7 @@ import com.squareup.moshi.Json
  * @param playoffType Playoff Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/playoff_type.py#L4, or null.
  * @param playoffTypeString String representation of the `playoff_type`, or null.
  */
+
 data class Event (
     /* TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event. */
     @Json(name = "key")
@@ -137,6 +138,7 @@ data class Event (
     /* String representation of the `playoff_type`, or null. */
     @Json(name = "playoff_type_string")
     val playoffTypeString: kotlin.String? = null
-)
+) 
+
 
 

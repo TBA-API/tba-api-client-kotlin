@@ -23,6 +23,7 @@ import com.squareup.moshi.Json
  * @param directUrl Direct URL to the media.
  * @param viewUrl The URL that leads to the full web page for the media, if one exists.
  */
+
 data class Media (
     /* TBA identifier for this media. */
     @Json(name = "key")
@@ -45,13 +46,16 @@ data class Media (
     /* The URL that leads to the full web page for the media, if one exists. */
     @Json(name = "view_url")
     val viewUrl: kotlin.String? = null
-)
+) 
+
 
 {
+
     /**
     * String type of the media element.
     * Values: youtube,cdphotothread,imgur,facebookMinusProfile,youtubeMinusChannel,twitterMinusProfile,githubMinusProfile,instagramMinusProfile,periscopeMinusProfile,grabcad,instagramMinusImage,externalMinusLink,avatar
     */
+    
     enum class Type(val value: kotlin.String){
     
         @Json(name = "youtube") youtube("youtube"),
@@ -80,7 +84,8 @@ data class Media (
     
         @Json(name = "avatar") avatar("avatar");
     
-    }
-}
 
+    }
+
+}
 

@@ -25,6 +25,7 @@ import com.squareup.moshi.Json
  * @param dq Number of times disqualified.
  * @param teamKey The team with this rank.
  */
+
 data class EventRankingRankings (
     /* Number of matches played by this team. */
     @Json(name = "matches_played")
@@ -49,6 +50,7 @@ data class EventRankingRankings (
     /* Additional year-specific information, may be null. See parent `sort_order_info` for details. */
     @Json(name = "sort_orders")
     val sortOrders: kotlin.Array<java.math.BigDecimal>? = null
-)
+) 
+
 
 

@@ -20,6 +20,7 @@ import com.squareup.moshi.Json
  * @param surrogateTeamKeys TBA team keys (eg `frc254`) of any teams playing as a surrogate.
  * @param dqTeamKeys TBA team keys (eg `frc254`) of any disqualified teams.
  */
+
 data class MatchAlliance (
     /* Score for this alliance. Will be null or -1 for an unplayed match. */
     @Json(name = "score")
@@ -32,6 +33,7 @@ data class MatchAlliance (
     /* TBA team keys (eg `frc254`) of any disqualified teams. */
     @Json(name = "dq_team_keys")
     val dqTeamKeys: kotlin.Array<kotlin.String>? = null
-)
+) 
+
 
 

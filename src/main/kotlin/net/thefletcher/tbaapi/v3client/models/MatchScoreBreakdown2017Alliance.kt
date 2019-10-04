@@ -49,6 +49,7 @@ import com.squareup.moshi.Json
  * @param touchpadMiddle 
  * @param touchpadFar 
  */
+
 data class MatchScoreBreakdown2017Alliance (
     @Json(name = "autoPoints")
     val autoPoints: kotlin.Int? = null,
@@ -116,13 +117,16 @@ data class MatchScoreBreakdown2017Alliance (
     val touchpadMiddle: kotlin.String? = null,
     @Json(name = "touchpadFar")
     val touchpadFar: kotlin.String? = null
-)
+) 
+
 
 {
+
     /**
     * 
     * Values: unknown,mobility,none
     */
+    
     enum class Robot1Auto(val value: kotlin.String){
     
         @Json(name = "Unknown") unknown("Unknown"),
@@ -131,14 +135,14 @@ data class MatchScoreBreakdown2017Alliance (
     
         @Json(name = "None") none("None");
     
-    }
-}
 
-{
+    }
+
     /**
     * 
     * Values: unknown,mobility,none
     */
+    
     enum class Robot2Auto(val value: kotlin.String){
     
         @Json(name = "Unknown") unknown("Unknown"),
@@ -147,14 +151,14 @@ data class MatchScoreBreakdown2017Alliance (
     
         @Json(name = "None") none("None");
     
-    }
-}
 
-{
+    }
+
     /**
     * 
     * Values: unknown,mobility,none
     */
+    
     enum class Robot3Auto(val value: kotlin.String){
     
         @Json(name = "Unknown") unknown("Unknown"),
@@ -163,7 +167,8 @@ data class MatchScoreBreakdown2017Alliance (
     
         @Json(name = "None") none("None");
     
-    }
-}
 
+    }
+
+}
 

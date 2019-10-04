@@ -22,6 +22,7 @@ import com.squareup.moshi.Json
  * @param recipientList A list of recipients of the award at the event. May have either a team_key or an awardee, both, or neither (in the case the award wasn't awarded at the event).
  * @param year The year this award was won.
  */
+
 data class Award (
     /* The name of the award as provided by FIRST. May vary for the same award type. */
     @Json(name = "name")
@@ -38,6 +39,7 @@ data class Award (
     /* The year this award was won. */
     @Json(name = "year")
     val year: kotlin.Int
-)
+) 
+
 
 

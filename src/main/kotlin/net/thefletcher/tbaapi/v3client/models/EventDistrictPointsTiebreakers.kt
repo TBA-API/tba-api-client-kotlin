@@ -18,11 +18,13 @@ import com.squareup.moshi.Json
  * @param highestQualScores 
  * @param qualWins 
  */
+
 data class EventDistrictPointsTiebreakers (
     @Json(name = "highest_qual_scores")
     val highestQualScores: kotlin.Array<kotlin.Int>? = null,
     @Json(name = "qual_wins")
     val qualWins: kotlin.Int? = null
-)
+) 
+
 
 

@@ -34,6 +34,7 @@ import com.squareup.moshi.Json
  * @param motto Team's motto as provided by FIRST. This field is deprecated and will return null - will be removed at end-of-season in 2019.
  * @param homeChampionship Location of the team's home championship each year as a key-value pair. The year (as a string) is the key, and the city is the value.
  */
+
 data class Team (
     /* TBA team key with the format `frcXXXX` with `XXXX` representing the team number. */
     @Json(name = "key")
@@ -89,6 +90,7 @@ data class Team (
     /* Location of the team's home championship each year as a key-value pair. The year (as a string) is the key, and the city is the value. */
     @Json(name = "home_championship")
     val homeChampionship: kotlin.Any? = null
-)
+) 
+
 
 

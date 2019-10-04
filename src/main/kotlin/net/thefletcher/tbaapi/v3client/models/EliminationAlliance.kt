@@ -23,6 +23,7 @@ import com.squareup.moshi.Json
  * @param picks List of team keys picked for the alliance. First pick is captain.
  * @param status 
  */
+
 data class EliminationAlliance (
     /* List of team keys picked for the alliance. First pick is captain. */
     @Json(name = "picks")
@@ -37,6 +38,7 @@ data class EliminationAlliance (
     val declines: kotlin.Array<kotlin.String>? = null,
     @Json(name = "status")
     val status: EliminationAllianceStatus? = null
-)
+) 
+
 
 

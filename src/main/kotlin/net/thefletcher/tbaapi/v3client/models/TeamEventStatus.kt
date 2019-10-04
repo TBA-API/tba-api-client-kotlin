@@ -27,6 +27,7 @@ import com.squareup.moshi.Json
  * @param nextMatchKey TBA match key for the next match the team is scheduled to play in at this event, or null.
  * @param lastMatchKey TBA match key for the last match the team played in at this event, or null.
  */
+
 data class TeamEventStatus (
     @Json(name = "qual")
     val qual: TeamEventStatusRank? = null,
@@ -49,6 +50,7 @@ data class TeamEventStatus (
     /* TBA match key for the last match the team played in at this event, or null. */
     @Json(name = "last_match_key")
     val lastMatchKey: kotlin.String? = null
-)
+) 
+
 
 

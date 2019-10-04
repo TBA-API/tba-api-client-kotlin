@@ -28,6 +28,7 @@ import com.squareup.moshi.Json
  * @param endDate Event end date in `yyyy-mm-dd` format.
  * @param year Year the event data is for.
  */
+
 data class EventSimple (
     /* TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event. */
     @Json(name = "key")
@@ -61,6 +62,7 @@ data class EventSimple (
     /* Country the event is located in. */
     @Json(name = "country")
     val country: kotlin.String? = null
-)
+) 
+
 
 

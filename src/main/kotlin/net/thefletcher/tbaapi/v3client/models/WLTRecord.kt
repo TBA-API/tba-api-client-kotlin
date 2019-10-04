@@ -19,6 +19,7 @@ import com.squareup.moshi.Json
  * @param wins Number of wins.
  * @param ties Number of ties.
  */
+
 data class WLTRecord (
     /* Number of losses. */
     @Json(name = "losses")
@@ -29,6 +30,7 @@ data class WLTRecord (
     /* Number of ties. */
     @Json(name = "ties")
     val ties: kotlin.Int
-)
+) 
+
 
 

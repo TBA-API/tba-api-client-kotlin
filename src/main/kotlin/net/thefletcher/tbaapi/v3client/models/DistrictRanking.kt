@@ -22,6 +22,7 @@ import com.squareup.moshi.Json
  * @param pointTotal Total district points for the team.
  * @param eventPoints List of events that contributed to the point total for the team.
  */
+
 data class DistrictRanking (
     /* TBA team key for the team. */
     @Json(name = "team_key")
@@ -38,6 +39,7 @@ data class DistrictRanking (
     /* List of events that contributed to the point total for the team. */
     @Json(name = "event_points")
     val eventPoints: kotlin.Array<DistrictRankingEventPoints>? = null
-)
+) 
+
 
 

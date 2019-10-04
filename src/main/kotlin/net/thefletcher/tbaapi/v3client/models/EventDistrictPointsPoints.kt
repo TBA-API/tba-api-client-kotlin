@@ -21,6 +21,7 @@ import com.squareup.moshi.Json
  * @param awardPoints Points awarded for event awards.
  * @param qualPoints Points awarded for qualification match performance.
  */
+
 data class EventDistrictPointsPoints (
     /* Total points awarded at this event. */
     @Json(name = "total")
@@ -37,6 +38,7 @@ data class EventDistrictPointsPoints (
     /* Points awarded for qualification match performance. */
     @Json(name = "qual_points")
     val qualPoints: kotlin.Int
-)
+) 
+
 
 

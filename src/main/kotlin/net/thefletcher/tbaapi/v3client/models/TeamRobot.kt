@@ -20,6 +20,7 @@ import com.squareup.moshi.Json
  * @param key Internal TBA identifier for this robot.
  * @param teamKey TBA team key for this robot.
  */
+
 data class TeamRobot (
     /* Year this robot competed in. */
     @Json(name = "year")
@@ -33,6 +34,7 @@ data class TeamRobot (
     /* TBA team key for this robot. */
     @Json(name = "team_key")
     val teamKey: kotlin.String
-)
+) 
+
 
 

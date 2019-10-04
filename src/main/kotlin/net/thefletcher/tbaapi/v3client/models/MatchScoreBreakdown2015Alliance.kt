@@ -40,6 +40,7 @@ import com.squareup.moshi.Json
  * @param litterCountUnprocessed 
  * @param robotSet 
  */
+
 data class MatchScoreBreakdown2015Alliance (
     @Json(name = "auto_points")
     val autoPoints: kotlin.Int? = null,
@@ -89,6 +90,7 @@ data class MatchScoreBreakdown2015Alliance (
     val litterCountUnprocessed: kotlin.Int? = null,
     @Json(name = "robot_set")
     val robotSet: kotlin.Boolean? = null
-)
+) 
+
 
 

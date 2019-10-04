@@ -18,6 +18,7 @@ import com.squareup.moshi.Json
  * @param precision The number of digits of precision used for this value, eg `2` would correspond to a value of `101.11` while `0` would correspond to `101`.
  * @param name The descriptive name of the value used to sort the ranking.
  */
+
 data class TeamEventStatusRankSortOrderInfo (
     /* The number of digits of precision used for this value, eg `2` would correspond to a value of `101.11` while `0` would correspond to `101`. */
     @Json(name = "precision")
@@ -25,6 +26,7 @@ data class TeamEventStatusRankSortOrderInfo (
     /* The descriptive name of the value used to sort the ranking. */
     @Json(name = "name")
     val name: kotlin.String? = null
-)
+) 
+
 
 

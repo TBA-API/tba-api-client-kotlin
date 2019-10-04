@@ -18,6 +18,7 @@ import com.squareup.moshi.Json
  * @param type Can be one of 'youtube' or 'tba'
  * @param key Unique key representing this video
  */
+
 data class MatchVideos (
     /* Can be one of 'youtube' or 'tba' */
     @Json(name = "type")
@@ -25,6 +26,7 @@ data class MatchVideos (
     /* Unique key representing this video */
     @Json(name = "key")
     val key: kotlin.String? = null
-)
+) 
+
 
 

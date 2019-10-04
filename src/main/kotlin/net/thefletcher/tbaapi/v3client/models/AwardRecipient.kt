@@ -18,6 +18,7 @@ import com.squareup.moshi.Json
  * @param teamKey The TBA team key for the team that was given the award. May be null.
  * @param awardee The name of the individual given the award. May be null.
  */
+
 data class AwardRecipient (
     /* The TBA team key for the team that was given the award. May be null. */
     @Json(name = "team_key")
@@ -25,6 +26,7 @@ data class AwardRecipient (
     /* The name of the individual given the award. May be null. */
     @Json(name = "awardee")
     val awardee: kotlin.String? = null
-)
+) 
+
 
 

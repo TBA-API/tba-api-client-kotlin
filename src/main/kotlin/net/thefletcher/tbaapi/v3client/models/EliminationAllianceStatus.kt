@@ -22,6 +22,7 @@ import com.squareup.moshi.Json
  * @param currentLevelRecord 
  * @param status 
  */
+
 data class EliminationAllianceStatus (
     @Json(name = "playoff_average")
     val playoffAverage: kotlin.Double? = null,
@@ -33,6 +34,7 @@ data class EliminationAllianceStatus (
     val currentLevelRecord: WLTRecord? = null,
     @Json(name = "status")
     val status: kotlin.String? = null
-)
+) 
+
 
 

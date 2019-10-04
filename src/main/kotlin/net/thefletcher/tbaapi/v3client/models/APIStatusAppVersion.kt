@@ -18,6 +18,7 @@ import com.squareup.moshi.Json
  * @param minAppVersion Internal use - Minimum application version required to correctly connect and process data.
  * @param latestAppVersion Internal use - Latest application version available.
  */
+
 data class APIStatusAppVersion (
     /* Internal use - Minimum application version required to correctly connect and process data. */
     @Json(name = "min_app_version")
@@ -25,6 +26,7 @@ data class APIStatusAppVersion (
     /* Internal use - Latest application version available. */
     @Json(name = "latest_app_version")
     val latestAppVersion: kotlin.Int
-)
+) 
+
 
 

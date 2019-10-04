@@ -19,11 +19,13 @@ import com.squareup.moshi.Json
  * @param blue 
  * @param red 
  */
+
 data class MatchScoreBreakdown2016 (
     @Json(name = "blue")
     val blue: MatchScoreBreakdown2016Alliance? = null,
     @Json(name = "red")
     val red: MatchScoreBreakdown2016Alliance? = null
-)
+) 
+
 
 

@@ -19,6 +19,7 @@ import com.squareup.moshi.Json
  * @param channel Type specific channel information. May be the YouTube stream, or Twitch channel name. In the case of iframe types, contains HTML to embed the stream in an HTML iframe.
  * @param file File identification as may be required for some types. May be null.
  */
+
 data class Webcast (
     /* Type of webcast, typically descriptive of the streaming provider. */
     @Json(name = "type")
@@ -29,13 +30,16 @@ data class Webcast (
     /* File identification as may be required for some types. May be null. */
     @Json(name = "file")
     val file: kotlin.String? = null
-)
+) 
+
 
 {
+
     /**
     * Type of webcast, typically descriptive of the streaming provider.
     * Values: youtube,twitch,ustream,iframe,html5,rtmp,livestream,directLink,mms,justin,stemtv,dacast
     */
+    
     enum class Type(val value: kotlin.String){
     
         @Json(name = "youtube") youtube("youtube"),
@@ -62,7 +66,8 @@ data class Webcast (
     
         @Json(name = "dacast") dacast("dacast");
     
-    }
-}
 
+    }
+
+}
 

@@ -22,6 +22,7 @@ import com.squareup.moshi.Json
  * @param sortOrderInfo Ordered list of names corresponding to the elements of the `sort_orders` array.
  * @param status 
  */
+
 data class TeamEventStatusRank (
     /* Number of teams ranked. */
     @Json(name = "num_teams")
@@ -33,6 +34,7 @@ data class TeamEventStatusRank (
     val sortOrderInfo: kotlin.Array<TeamEventStatusRankSortOrderInfo>? = null,
     @Json(name = "status")
     val status: kotlin.String? = null
-)
+) 
+
 
 

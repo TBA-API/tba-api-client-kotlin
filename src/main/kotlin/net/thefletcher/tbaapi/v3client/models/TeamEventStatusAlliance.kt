@@ -21,6 +21,7 @@ import com.squareup.moshi.Json
  * @param backup 
  * @param pick Order the team was picked in the alliance from 0-2, with 0 being alliance captain.
  */
+
 data class TeamEventStatusAlliance (
     /* Alliance number. */
     @Json(name = "number")
@@ -33,6 +34,7 @@ data class TeamEventStatusAlliance (
     val name: kotlin.String? = null,
     @Json(name = "backup")
     val backup: TeamEventStatusAllianceBackup? = null
-)
+) 
+
 
 

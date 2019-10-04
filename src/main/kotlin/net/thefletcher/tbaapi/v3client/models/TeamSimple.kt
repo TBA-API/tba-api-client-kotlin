@@ -23,6 +23,7 @@ import com.squareup.moshi.Json
  * @param stateProv State of team derived from parsing the address registered with FIRST.
  * @param country Country of team derived from parsing the address registered with FIRST.
  */
+
 data class TeamSimple (
     /* TBA team key with the format `frcXXXX` with `XXXX` representing the team number. */
     @Json(name = "key")
@@ -45,6 +46,7 @@ data class TeamSimple (
     /* Country of team derived from parsing the address registered with FIRST. */
     @Json(name = "country")
     val country: kotlin.String? = null
-)
+) 
+
 
 

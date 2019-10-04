@@ -47,6 +47,7 @@ import com.squareup.moshi.Json
  * @param redScore Current score for the red alliance.
  * @param redSwitchOwned 1 if the red alliance owns their SWITCH, 0 if not.
  */
+
 data class MatchTimeseries2018 (
     /* TBA event key with the format yyyy[EVENT_CODE], where yyyy is the year, and EVENT_CODE is the event code of the event. */
     @Json(name = "event_key")
@@ -140,6 +141,7 @@ data class MatchTimeseries2018 (
     /* 1 if the red alliance owns their SWITCH, 0 if not. */
     @Json(name = "red_switch_owned")
     val redSwitchOwned: kotlin.Int? = null
-)
+) 
+
 
 

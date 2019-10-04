@@ -22,6 +22,7 @@ import com.squareup.moshi.Json
  * @param status Current competition status for the playoffs.
  * @param playoffAverage The average match score during playoffs. Year specific. May be null if not relevant for a given year.
  */
+
 data class TeamEventStatusPlayoff (
     /* The highest playoff level the team reached. */
     @Json(name = "level")
@@ -36,13 +37,16 @@ data class TeamEventStatusPlayoff (
     /* The average match score during playoffs. Year specific. May be null if not relevant for a given year. */
     @Json(name = "playoff_average")
     val playoffAverage: kotlin.Int? = null
-)
+) 
+
 
 {
+
     /**
     * The highest playoff level the team reached.
     * Values: qm,ef,qf,sf,f
     */
+    
     enum class Level(val value: kotlin.String){
     
         @Json(name = "qm") qm("qm"),
@@ -55,14 +59,14 @@ data class TeamEventStatusPlayoff (
     
         @Json(name = "f") f("f");
     
-    }
-}
 
-{
+    }
+
     /**
     * Current competition status for the playoffs.
     * Values: won,eliminated,playing
     */
+    
     enum class Status(val value: kotlin.String){
     
         @Json(name = "won") won("won"),
@@ -71,7 +75,8 @@ data class TeamEventStatusPlayoff (
     
         @Json(name = "playing") playing("playing");
     
-    }
-}
 
+    }
+
+}
 

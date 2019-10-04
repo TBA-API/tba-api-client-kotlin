@@ -19,11 +19,13 @@ import com.squareup.moshi.Json
  * @param red 
  * @param blue 
  */
+
 data class MatchSimpleAlliances (
     @Json(name = "red")
     val red: MatchAlliance? = null,
     @Json(name = "blue")
     val blue: MatchAlliance? = null
-)
+) 
+
 
 
