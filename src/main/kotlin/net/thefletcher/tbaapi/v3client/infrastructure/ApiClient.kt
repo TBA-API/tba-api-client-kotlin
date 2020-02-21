@@ -1,5 +1,6 @@
 package net.thefletcher.tbaapi.v3client.infrastructure
 
+import okhttp3.Credentials
 import okhttp3.OkHttpClient
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -121,7 +122,7 @@ open class ApiClient(val baseUrl: String) {
         val contentType = (headers[ContentType] as String).substringBefore(";").toLowerCase()
 
         val request = when (requestConfig.method) {
-            RequestMethod.DELETE -> Request.Builder().url(url).delete()
+            RequestMethod.DELETE -> Request.Builder().url(url).delete(requestBody(body, contentType))
             RequestMethod.GET -> Request.Builder().url(url)
             RequestMethod.HEAD -> Request.Builder().url(url).head()
             RequestMethod.PATCH -> Request.Builder().url(url).patch(requestBody(body, contentType))
@@ -163,5 +164,9 @@ open class ApiClient(val baseUrl: String) {
                     response.headers.toMultimap()
             )
         }
+    }
+
+    protected inline fun <reified T: Any> parseDateToQueryString(value : T): String {
+        return value.toString()
     }
 }

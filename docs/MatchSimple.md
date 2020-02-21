@@ -8,9 +8,9 @@ Name | Type | Description | Notes
 **compLevel** | [**inline**](#CompLevelEnum) | The competition level the match was played at. | 
 **setNumber** | **kotlin.Int** | The set number in a series of matches where more than one match is required in the match series. | 
 **matchNumber** | **kotlin.Int** | The match number of the match in the competition level. | 
+**eventKey** | **kotlin.String** | Event key of the event the match was played at. | 
 **alliances** | [**MatchSimpleAlliances**](MatchSimpleAlliances.md) |  |  [optional]
 **winningAlliance** | [**inline**](#WinningAllianceEnum) | The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie. |  [optional]
-**eventKey** | **kotlin.String** | Event key of the event the match was played at. | 
 **time** | **kotlin.Long** | UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the scheduled match time, as taken from the published schedule. |  [optional]
 **predictedTime** | **kotlin.Long** | UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the TBA predicted match start time. |  [optional]
 **actualTime** | **kotlin.Long** | UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time. |  [optional]
@@ -27,7 +27,7 @@ compLevel | qm, ef, qf, sf, f
 ## Enum: winning_alliance
 Name | Value
 ---- | -----
-winningAlliance | red, blue
+winningAlliance | red, blue, 
 
 
 

@@ -8,15 +8,15 @@ Name | Type | Description | Notes
 **name** | **kotlin.String** | Official name of event on record either provided by FIRST or organizers of offseason event. | 
 **eventCode** | **kotlin.String** | Event short code, as provided by FIRST. | 
 **eventType** | **kotlin.Int** | Event Type, as defined here: https://github.com/the-blue-alliance/the-blue-alliance/blob/master/consts/event_type.py#L2 | 
+**startDate** | [**java.time.LocalDate**](java.time.LocalDate.md) | Event start date in &#x60;yyyy-mm-dd&#x60; format. | 
+**endDate** | [**java.time.LocalDate**](java.time.LocalDate.md) | Event end date in &#x60;yyyy-mm-dd&#x60; format. | 
+**year** | **kotlin.Int** | Year the event data is for. | 
+**eventTypeString** | **kotlin.String** | Event Type, eg Regional, District, or Offseason. | 
 **district** | [**DistrictList**](DistrictList.md) |  |  [optional]
 **city** | **kotlin.String** | City, town, village, etc. the event is located in. |  [optional]
 **stateProv** | **kotlin.String** | State or Province the event is located in. |  [optional]
 **country** | **kotlin.String** | Country the event is located in. |  [optional]
-**startDate** | [**java.time.LocalDate**](java.time.LocalDate.md) | Event start date in &#x60;yyyy-mm-dd&#x60; format. | 
-**endDate** | [**java.time.LocalDate**](java.time.LocalDate.md) | Event end date in &#x60;yyyy-mm-dd&#x60; format. | 
-**year** | **kotlin.Int** | Year the event data is for. | 
 **shortName** | **kotlin.String** | Same as &#x60;name&#x60; but doesn&#39;t include event specifiers, such as &#39;Regional&#39; or &#39;District&#39;. May be null. |  [optional]
-**eventTypeString** | **kotlin.String** | Event Type, eg Regional, District, or Offseason. | 
 **week** | **kotlin.Int** | Week of the event relative to the first official season event, zero-indexed. Only valid for Regionals, Districts, and District Championships. Null otherwise. (Eg. A season with a week 0 &#39;preseason&#39; event does not count, and week 1 events will show 0 here. Seasons with a week 0.5 regional event will show week 0 for those event(s) and week 1 for week 1 events and so on.) |  [optional]
 **address** | **kotlin.String** | Address of the event&#39;s venue, if available. |  [optional]
 **postalCode** | **kotlin.String** | Postal code from the event address. |  [optional]

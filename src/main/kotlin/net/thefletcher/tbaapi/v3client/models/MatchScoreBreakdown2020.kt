@@ -11,21 +11,20 @@
 */
 package net.thefletcher.tbaapi.v3client.models
 
+import net.thefletcher.tbaapi.v3client.models.MatchScoreBreakdown2020Alliance
 
 import com.squareup.moshi.Json
 /**
- * An `Award_Recipient` object represents the team and/or person who received an award at an event.
- * @param teamKey The TBA team key for the team that was given the award. May be null.
- * @param awardee The name of the individual given the award. May be null.
+ * See the 2020 FMS API documentation for a description of each value. https://frcevents2.docs.apiary.io/#/reference/match-results/score-details
+ * @param blue 
+ * @param red 
  */
 
-data class AwardRecipient (
-    /* The TBA team key for the team that was given the award. May be null. */
-    @Json(name = "team_key")
-    val teamKey: kotlin.String? = null,
-    /* The name of the individual given the award. May be null. */
-    @Json(name = "awardee")
-    val awardee: kotlin.String? = null
+data class MatchScoreBreakdown2020 (
+    @Json(name = "blue")
+    val blue: MatchScoreBreakdown2020Alliance? = null,
+    @Json(name = "red")
+    val red: MatchScoreBreakdown2020Alliance? = null
 ) 
 
 

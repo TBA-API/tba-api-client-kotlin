@@ -11,21 +11,22 @@
 */
 package net.thefletcher.tbaapi.v3client.models
 
+import net.thefletcher.tbaapi.v3client.models.ZebraTeam
 
 import com.squareup.moshi.Json
 /**
- * An `Award_Recipient` object represents the team and/or person who received an award at an event.
- * @param teamKey The TBA team key for the team that was given the award. May be null.
- * @param awardee The name of the individual given the award. May be null.
+ * 
+ * @param red Zebra MotionWorks data for teams on the red alliance
+ * @param blue Zebra data for teams on the blue alliance
  */
 
-data class AwardRecipient (
-    /* The TBA team key for the team that was given the award. May be null. */
-    @Json(name = "team_key")
-    val teamKey: kotlin.String? = null,
-    /* The name of the individual given the award. May be null. */
-    @Json(name = "awardee")
-    val awardee: kotlin.String? = null
+data class ZebraAlliances (
+    /* Zebra MotionWorks data for teams on the red alliance */
+    @Json(name = "red")
+    val red: kotlin.Array<ZebraTeam>? = null,
+    /* Zebra data for teams on the blue alliance */
+    @Json(name = "blue")
+    val blue: kotlin.Array<ZebraTeam>? = null
 ) 
 
 

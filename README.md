@@ -108,6 +108,7 @@ Class | Method | HTTP request | Description
 *MatchApi* | [**getMatch**](docs/MatchApi.md#getmatch) | **GET** /match/{match_key} | 
 *MatchApi* | [**getMatchSimple**](docs/MatchApi.md#getmatchsimple) | **GET** /match/{match_key}/simple | 
 *MatchApi* | [**getMatchTimeseries**](docs/MatchApi.md#getmatchtimeseries) | **GET** /match/{match_key}/timeseries | 
+*MatchApi* | [**getMatchZebra**](docs/MatchApi.md#getmatchzebra) | **GET** /match/{match_key}/zebra_motionworks | 
 *MatchApi* | [**getTeamEventMatches**](docs/MatchApi.md#getteameventmatches) | **GET** /team/{team_key}/event/{event_key}/matches | 
 *MatchApi* | [**getTeamEventMatchesKeys**](docs/MatchApi.md#getteameventmatcheskeys) | **GET** /team/{team_key}/event/{event_key}/matches/keys | 
 *MatchApi* | [**getTeamEventMatchesSimple**](docs/MatchApi.md#getteameventmatchessimple) | **GET** /team/{team_key}/event/{event_key}/matches/simple | 
@@ -196,6 +197,8 @@ Class | Method | HTTP request | Description
  - [net.thefletcher.tbaapi.v3client.models.MatchScoreBreakdown2018Alliance](docs/MatchScoreBreakdown2018Alliance.md)
  - [net.thefletcher.tbaapi.v3client.models.MatchScoreBreakdown2019](docs/MatchScoreBreakdown2019.md)
  - [net.thefletcher.tbaapi.v3client.models.MatchScoreBreakdown2019Alliance](docs/MatchScoreBreakdown2019Alliance.md)
+ - [net.thefletcher.tbaapi.v3client.models.MatchScoreBreakdown2020](docs/MatchScoreBreakdown2020.md)
+ - [net.thefletcher.tbaapi.v3client.models.MatchScoreBreakdown2020Alliance](docs/MatchScoreBreakdown2020Alliance.md)
  - [net.thefletcher.tbaapi.v3client.models.MatchSimple](docs/MatchSimple.md)
  - [net.thefletcher.tbaapi.v3client.models.MatchSimpleAlliances](docs/MatchSimpleAlliances.md)
  - [net.thefletcher.tbaapi.v3client.models.MatchTimeseries2018](docs/MatchTimeseries2018.md)
@@ -213,6 +216,9 @@ Class | Method | HTTP request | Description
  - [net.thefletcher.tbaapi.v3client.models.TeamSimple](docs/TeamSimple.md)
  - [net.thefletcher.tbaapi.v3client.models.WLTRecord](docs/WLTRecord.md)
  - [net.thefletcher.tbaapi.v3client.models.Webcast](docs/Webcast.md)
+ - [net.thefletcher.tbaapi.v3client.models.Zebra](docs/Zebra.md)
+ - [net.thefletcher.tbaapi.v3client.models.ZebraAlliances](docs/ZebraAlliances.md)
+ - [net.thefletcher.tbaapi.v3client.models.ZebraTeam](docs/ZebraTeam.md)
 
 
 <a name="documentation-for-authorization"></a>

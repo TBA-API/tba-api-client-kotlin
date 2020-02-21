@@ -4,9 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **kotlin.String** | TBA identifier for this media. | 
 **type** | [**inline**](#TypeEnum) | String type of the media element. | 
-**foreignKey** | **kotlin.String** | The key used to identify this media on the media site. |  [optional]
+**foreignKey** | **kotlin.String** | The key used to identify this media on the media site. | 
 **details** | [**kotlin.Any**](.md) | If required, a JSON dict of additional media information. |  [optional]
 **preferred** | **kotlin.Boolean** | True if the media is of high quality. |  [optional]
 **directUrl** | **kotlin.String** | Direct URL to the media. |  [optional]

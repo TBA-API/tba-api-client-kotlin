@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getMatch**](MatchApi.md#getMatch) | **GET** /match/{match_key} | 
 [**getMatchSimple**](MatchApi.md#getMatchSimple) | **GET** /match/{match_key}/simple | 
 [**getMatchTimeseries**](MatchApi.md#getMatchTimeseries) | **GET** /match/{match_key}/timeseries | 
+[**getMatchZebra**](MatchApi.md#getMatchZebra) | **GET** /match/{match_key}/zebra_motionworks | 
 [**getTeamEventMatches**](MatchApi.md#getTeamEventMatches) | **GET** /team/{team_key}/event/{event_key}/matches | 
 [**getTeamEventMatchesKeys**](MatchApi.md#getTeamEventMatchesKeys) | **GET** /team/{team_key}/event/{event_key}/matches/keys | 
 [**getTeamEventMatchesSimple**](MatchApi.md#getTeamEventMatchesSimple) | **GET** /team/{team_key}/event/{event_key}/matches/simple | 
@@ -370,6 +371,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**kotlin.Array&lt;kotlin.Any&gt;**](kotlin.Any.md)
+
+### Authorization
+
+
+Configure apiKey:
+    ApiClient.apiKey["X-TBA-Auth-Key"] = ""
+    ApiClient.apiKeyPrefix["X-TBA-Auth-Key"] = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getMatchZebra"></a>
+# **getMatchZebra**
+> Zebra getMatchZebra(matchKey, ifMinusModifiedMinusSince)
+
+
+
+Gets Zebra MotionWorks data for a Match for the given match key.
+
+### Example
+```kotlin
+// Import classes:
+//import net.thefletcher.tbaapi.v3client.infrastructure.*
+//import net.thefletcher.tbaapi.v3client.models.*
+
+val apiInstance = MatchApi()
+val matchKey : kotlin.String = matchKey_example // kotlin.String | TBA Match Key, eg `2016nytr_qm1`
+val ifMinusModifiedMinusSince : kotlin.String = ifMinusModifiedMinusSince_example // kotlin.String | Value of the `Last-Modified` header in the most recently cached response by the client.
+try {
+    val result : Zebra = apiInstance.getMatchZebra(matchKey, ifMinusModifiedMinusSince)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling MatchApi#getMatchZebra")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling MatchApi#getMatchZebra")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **matchKey** | **kotlin.String**| TBA Match Key, eg &#x60;2016nytr_qm1&#x60; |
+ **ifMinusModifiedMinusSince** | **kotlin.String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+
+### Return type
+
+[**Zebra**](Zebra.md)
 
 ### Authorization
 
