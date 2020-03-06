@@ -17,6 +17,7 @@ import com.squareup.moshi.Json
  * 
  * @param type Type of webcast, typically descriptive of the streaming provider.
  * @param channel Type specific channel information. May be the YouTube stream, or Twitch channel name. In the case of iframe types, contains HTML to embed the stream in an HTML iframe.
+ * @param date The date for the webcast in `yyyy-mm-dd` format. May be null.
  * @param file File identification as may be required for some types. May be null.
  */
 
@@ -27,6 +28,9 @@ data class Webcast (
     /* Type specific channel information. May be the YouTube stream, or Twitch channel name. In the case of iframe types, contains HTML to embed the stream in an HTML iframe. */
     @Json(name = "channel")
     val channel: kotlin.String,
+    /* The date for the webcast in `yyyy-mm-dd` format. May be null. */
+    @Json(name = "date")
+    val date: kotlin.String? = null,
     /* File identification as may be required for some types. May be null. */
     @Json(name = "file")
     val file: kotlin.String? = null
