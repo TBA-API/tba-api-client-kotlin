@@ -30,7 +30,5 @@ data class Zebra (
     val times: kotlin.Array<kotlin.Double>,
     @Json(name = "alliances")
     val alliances: ZebraAlliances
-) 
-
-
+)
 

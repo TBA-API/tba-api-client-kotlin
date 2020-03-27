@@ -26,7 +26,5 @@ data class MatchVideos (
     /* Unique key representing this video */
     @Json(name = "key")
     val key: kotlin.String? = null
-) 
-
-
+)
 

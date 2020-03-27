@@ -50,7 +50,5 @@ data class EventRankingRankings (
     /* Additional year-specific information, may be null. See parent `sort_order_info` for details. */
     @Json(name = "sort_orders")
     val sortOrders: kotlin.Array<java.math.BigDecimal>? = null
-) 
-
-
+)
 

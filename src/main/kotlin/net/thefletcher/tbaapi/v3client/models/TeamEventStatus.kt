@@ -50,7 +50,5 @@ data class TeamEventStatus (
     /* TBA match key for the last match the team played in at this event, or null. */
     @Json(name = "last_match_key")
     val lastMatchKey: kotlin.String? = null
-) 
-
-
+)
 

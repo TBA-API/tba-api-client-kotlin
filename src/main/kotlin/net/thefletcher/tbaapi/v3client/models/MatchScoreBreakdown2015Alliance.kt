@@ -90,7 +90,5 @@ data class MatchScoreBreakdown2015Alliance (
     val litterCountUnprocessed: kotlin.Int? = null,
     @Json(name = "robot_set")
     val robotSet: kotlin.Boolean? = null
-) 
-
-
+)
 

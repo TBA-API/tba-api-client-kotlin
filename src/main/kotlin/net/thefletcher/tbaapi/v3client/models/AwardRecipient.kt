@@ -26,7 +26,5 @@ data class AwardRecipient (
     /* The name of the individual given the award. May be null. */
     @Json(name = "awardee")
     val awardee: kotlin.String? = null
-) 
-
-
+)
 

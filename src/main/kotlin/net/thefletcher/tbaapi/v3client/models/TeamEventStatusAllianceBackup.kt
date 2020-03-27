@@ -26,7 +26,5 @@ data class TeamEventStatusAllianceBackup (
     /* TBA key for the backup team called in. */
     @Json(name = "in")
     val `in`: kotlin.String? = null
-) 
-
-
+)
 

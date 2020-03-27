@@ -33,7 +33,5 @@ data class MatchAlliance (
     /* TBA team keys (eg `frc254`) of any disqualified teams. */
     @Json(name = "dq_team_keys")
     val dqTeamKeys: kotlin.Array<kotlin.String>? = null
-) 
-
-
+)
 

@@ -34,7 +34,5 @@ data class TeamEventStatusAlliance (
     val name: kotlin.String? = null,
     @Json(name = "backup")
     val backup: TeamEventStatusAllianceBackup? = null
-) 
-
-
+)
 

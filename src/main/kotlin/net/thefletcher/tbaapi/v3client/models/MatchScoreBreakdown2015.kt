@@ -31,10 +31,8 @@ data class MatchScoreBreakdown2015 (
     val coopertition: MatchScoreBreakdown2015.Coopertition? = null,
     @Json(name = "coopertition_points")
     val coopertitionPoints: kotlin.Int? = null
-) 
+) {
 
-
-{
     /**
     * 
     * Values: none,unknown,stack

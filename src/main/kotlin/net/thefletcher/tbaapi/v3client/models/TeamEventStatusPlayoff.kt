@@ -37,10 +37,8 @@ data class TeamEventStatusPlayoff (
     /* The average match score during playoffs. Year specific. May be null if not relevant for a given year. */
     @Json(name = "playoff_average")
     val playoffAverage: kotlin.Int? = null
-) 
+) {
 
-
-{
     /**
     * The highest playoff level the team reached.
     * Values: qm,ef,qf,sf,f

@@ -141,7 +141,5 @@ data class MatchTimeseries2018 (
     /* 1 if the red alliance owns their SWITCH, 0 if not. */
     @Json(name = "red_switch_owned")
     val redSwitchOwned: kotlin.Int? = null
-) 
-
-
+)
 

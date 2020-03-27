@@ -26,7 +26,5 @@ data class TeamEventStatusRankSortOrderInfo (
     /* The descriptive name of the value used to sort the ranking. */
     @Json(name = "name")
     val name: kotlin.String? = null
-) 
-
-
+)
 

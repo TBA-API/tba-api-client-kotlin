@@ -166,7 +166,5 @@ data class EventInsights2018 (
     /* Average scale ownership percentage for the winning alliance during teleop. */
     @Json(name = "winning_scale_ownership_percentage_teleop")
     val winningScaleOwnershipPercentageTeleop: kotlin.Float
-) 
-
-
+)
 

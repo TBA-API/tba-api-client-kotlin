@@ -34,7 +34,5 @@ data class TeamRobot (
     /* TBA team key for this robot. */
     @Json(name = "team_key")
     val teamKey: kotlin.String
-) 
-
-
+)
 

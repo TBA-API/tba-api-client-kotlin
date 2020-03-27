@@ -58,10 +58,8 @@ data class MatchSimple (
     /* UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time. */
     @Json(name = "actual_time")
     val actualTime: kotlin.Long? = null
-) 
+) {
 
-
-{
     /**
     * The competition level the match was played at.
     * Values: qm,ef,qf,sf,f

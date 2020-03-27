@@ -132,10 +132,8 @@ data class MatchScoreBreakdown2016Alliance (
     val position4crossings: kotlin.Int? = null,
     @Json(name = "position5crossings")
     val position5crossings: kotlin.Int? = null
-) 
+) {
 
-
-{
     /**
     * 
     * Values: crossed,reached,none

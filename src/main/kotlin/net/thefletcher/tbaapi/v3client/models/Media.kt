@@ -42,10 +42,8 @@ data class Media (
     /* The URL that leads to the full web page for the media, if one exists. */
     @Json(name = "view_url")
     val viewUrl: kotlin.String? = null
-) 
+) {
 
-
-{
     /**
     * String type of the media element.
     * Values: youtube,cdphotothread,imgur,facebookMinusProfile,youtubeMinusChannel,twitterMinusProfile,githubMinusProfile,instagramMinusProfile,periscopeMinusProfile,grabcad,instagramMinusImage,externalMinusLink,avatar

@@ -26,7 +26,5 @@ data class EventInsights (
     /* Insights for the playoff round of an event */
     @Json(name = "playoff")
     val playoff: kotlin.Any? = null
-) 
-
-
+)
 

@@ -34,7 +34,5 @@ data class DistrictList (
     /* Year this district participated. */
     @Json(name = "year")
     val year: kotlin.Int
-) 
-
-
+)
 

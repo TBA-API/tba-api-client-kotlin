@@ -30,7 +30,5 @@ data class WLTRecord (
     /* Number of ties. */
     @Json(name = "ties")
     val ties: kotlin.Int
-) 
-
-
+)
 

@@ -171,7 +171,5 @@ data class MatchScoreBreakdown2019Alliance (
     val topRightRocketNear: kotlin.String? = null,
     @Json(name = "totalPoints")
     val totalPoints: kotlin.Int? = null
-) 
-
-
+)
 

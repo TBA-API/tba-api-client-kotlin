@@ -34,10 +34,8 @@ data class Webcast (
     /* File identification as may be required for some types. May be null. */
     @Json(name = "file")
     val file: kotlin.String? = null
-) 
+) {
 
-
-{
     /**
     * Type of webcast, typically descriptive of the streaming provider.
     * Values: youtube,twitch,ustream,iframe,html5,rtmp,livestream,directLink,mms,justin,stemtv,dacast

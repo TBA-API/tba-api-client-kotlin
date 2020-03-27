@@ -26,7 +26,5 @@ data class EventRankingExtraStatsInfo (
     /* Name of the field used in the `extra_stats` array. */
     @Json(name = "name")
     val name: kotlin.String
-) 
-
-
+)
 

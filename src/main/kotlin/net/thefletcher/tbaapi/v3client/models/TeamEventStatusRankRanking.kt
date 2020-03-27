@@ -46,7 +46,5 @@ data class TeamEventStatusRankRanking (
     /* TBA team key for this rank. */
     @Json(name = "team_key")
     val teamKey: kotlin.String? = null
-) 
-
-
+)
 

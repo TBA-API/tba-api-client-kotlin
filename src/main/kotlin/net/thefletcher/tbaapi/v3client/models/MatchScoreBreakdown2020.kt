@@ -25,7 +25,5 @@ data class MatchScoreBreakdown2020 (
     val blue: MatchScoreBreakdown2020Alliance? = null,
     @Json(name = "red")
     val red: MatchScoreBreakdown2020Alliance? = null
-) 
-
-
+)
 

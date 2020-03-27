@@ -30,7 +30,5 @@ data class ZebraTeam (
     /* A list containing doubles and nulls representing a teams Y position in feet at the corresponding timestamp. A null value represents no tracking data for a given timestamp. */
     @Json(name = "ys")
     val ys: kotlin.Array<kotlin.Double>
-) 
-
-
+)
 

@@ -28,7 +28,5 @@ data class EventDistrictPoints (
     /* Tiebreaker values for each team at the event. Stored as a key-value pair with the team key as the key, and an object describing the tiebreaker elements as its value. */
     @Json(name = "tiebreakers")
     val tiebreakers: kotlin.collections.Map<kotlin.String, EventDistrictPointsTiebreakers>? = null
-) 
-
-
+)
 

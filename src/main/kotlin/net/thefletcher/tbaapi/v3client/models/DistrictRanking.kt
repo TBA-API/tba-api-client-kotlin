@@ -39,7 +39,5 @@ data class DistrictRanking (
     /* List of events that contributed to the point total for the team. */
     @Json(name = "event_points")
     val eventPoints: kotlin.Array<DistrictRankingEventPoints>? = null
-) 
-
-
+)
 

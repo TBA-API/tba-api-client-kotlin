@@ -39,7 +39,5 @@ data class Award (
     /* The year this award was won. */
     @Json(name = "year")
     val year: kotlin.Int
-) 
-
-
+)
 

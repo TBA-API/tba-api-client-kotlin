@@ -30,7 +30,5 @@ data class EventOPRs (
     /* A key-value pair with team key (eg `frc254`) as key and CCWM as value. */
     @Json(name = "ccwms")
     val ccwms: kotlin.collections.Map<kotlin.String, kotlin.Float>? = null
-) 
-
-
+)
 

@@ -62,7 +62,5 @@ data class EventSimple (
     /* Country the event is located in. */
     @Json(name = "country")
     val country: kotlin.String? = null
-) 
-
-
+)
 

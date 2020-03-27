@@ -71,10 +71,8 @@ data class Match (
     /* Array of video objects associated with this match. */
     @Json(name = "videos")
     val videos: kotlin.Array<MatchVideos>? = null
-) 
+) {
 
-
-{
     /**
     * The competition level the match was played at.
     * Values: qm,ef,qf,sf,f

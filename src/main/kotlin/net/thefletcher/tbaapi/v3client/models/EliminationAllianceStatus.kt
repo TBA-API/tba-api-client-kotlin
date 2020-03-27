@@ -34,7 +34,5 @@ data class EliminationAllianceStatus (
     val currentLevelRecord: WLTRecord? = null,
     @Json(name = "status")
     val status: kotlin.String? = null
-) 
-
-
+)
 

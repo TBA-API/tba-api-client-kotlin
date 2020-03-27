@@ -38,7 +38,5 @@ data class EliminationAlliance (
     val declines: kotlin.Array<kotlin.String>? = null,
     @Json(name = "status")
     val status: EliminationAllianceStatus? = null
-) 
-
-
+)
 

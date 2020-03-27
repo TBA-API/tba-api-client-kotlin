@@ -27,7 +27,5 @@ data class ZebraAlliances (
     /* Zebra data for teams on the blue alliance */
     @Json(name = "blue")
     val blue: kotlin.Array<ZebraTeam>? = null
-) 
-
-
+)
 

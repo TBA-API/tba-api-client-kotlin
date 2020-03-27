@@ -117,10 +117,8 @@ data class MatchScoreBreakdown2017Alliance (
     val touchpadMiddle: kotlin.String? = null,
     @Json(name = "touchpadFar")
     val touchpadFar: kotlin.String? = null
-) 
+) {
 
-
-{
     /**
     * 
     * Values: unknown,mobility,none
